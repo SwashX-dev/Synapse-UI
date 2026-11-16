@@ -9,3 +9,5 @@
 - Generated TOML writes regenerate comments/formatting. External edit conflicts use last writer wins with backups. Schema version 1 has no historic SYNAPSE format migrations yet; eDEX settings import is supported.
 - MP4 requires ffmpeg, and capture at high resolution/duration can exhaust disk/RAM. Shader timings in diagnostics are CPU scheduling/submission, not GPU timer queries.
 - Legacy eDEX plugins do not run unchanged. Some globe/UI internals have been ported rather than retained verbatim; see MIGRATION.md.
+
+Full dependency audit snapshot (2026-11-16): npm reports 13 moderate transitive findings in build/lint tooling, traced to minimatch glob-pattern denial of service (GHSA-g3hv-75wg-m249). Production-only audit reports zero vulnerabilities. The suggested automatic fix includes a breaking electron-builder downgrade, so it has not been applied blindly. Avoid building untrusted source/glob inputs; updating these tooling dependencies remains maintenance work.
