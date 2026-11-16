@@ -34,7 +34,7 @@ jobs:
           path: release
       - name: Create checksums
         working-directory: release
-        run: sha256sum * > SHA256SUMS
+        run: sha256sum -- * > SHA256SUMS
       - name: Publish prerelease
         env:
           GH_TOKEN: ${{ github.token }}
