@@ -203,7 +203,10 @@ test('a normal launch opens no listening sockets (CVE-2023-30856 regression)', a
   child.stdout.on('data', (d) => (out += d));
   child.stderr.on('data', (d) => (out += d));
   try {
-    await expect.poll(() => out.includes('window created'), { timeout: 60000 }).toBe(true);
+    await expect.poll(() => {
+      if (child.exitCode !== null || child.signalCode !== null) throw new Error(`Electron exited before startup (${child.exitCode ?? child.signalCode}): ${out}`);
+      return out.includes('window created');
+    }, { timeout: 60000 }).toBe(true);
     await new Promise((r) => setTimeout(r, 6000)); // let the renderer start terminals and monitoring
     const tree = new Set<number>([child.pid!]);
     for (let pass = 0; pass < 4; pass++) {
