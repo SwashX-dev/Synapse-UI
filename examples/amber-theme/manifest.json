@@ -1,0 +1,12 @@
+{
+  "manifest_version": 1,
+  "id": "amber-theme",
+  "name": "Lab Amber",
+  "version": "1.0.0",
+  "kind": "themes",
+  "permissions": [],
+  "author": "SYNAPSE-UI contributors",
+  "themes": [
+    "lab-amber.toml"
+  ]
+}

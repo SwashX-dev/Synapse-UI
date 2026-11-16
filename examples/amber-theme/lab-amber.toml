@@ -1,0 +1,9 @@
+format = 1
+id = "lab-amber"
+name = "Lab Amber"
+base = "obsidian"
+[colors]
+accent = "#ffb454"
+neural = "#f5d9a5"
+[effects]
+glow_intensity = 0.15

@@ -1,0 +1,29 @@
+{
+  "manifest_version": 1,
+  "id": "cpu-panel",
+  "name": "CPU meter",
+  "version": "1.0.0",
+  "kind": "panel",
+  "permissions": [
+    "monitor.cpu"
+  ],
+  "author": "SYNAPSE-UI contributors",
+  "panel": {
+    "title": "CPU LOAD",
+    "widgets": [
+      {
+        "kind": "value",
+        "label": "CPU",
+        "source": "cpu.load",
+        "unit": "%"
+      },
+      {
+        "kind": "bar",
+        "label": "Load",
+        "source": "cpu.load",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  }
+}

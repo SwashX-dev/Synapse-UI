@@ -16,6 +16,7 @@ export async function launch(config = '', opts: { keepConfig?: string } = {}): P
     fs.writeFileSync(path.join(cfg, 'config.toml'), `config_version = 1\n[application]\nfullscreen = false\nboot_animation = false\nfirst_run_complete = true\n${config}\n[performance]\nbattery_saver = false\nmode = "eco"\n`);
   }
   const env: Record<string, string> = { ...(process.env as Record<string, string>), SYNAPSE_CONFIG_DIR: cfg };
+  delete env.ELECTRON_RUN_AS_NODE;
   // Headless CI/Xvfb: force X11 so a developer's Wayland session is not used.
   if (process.env.SYNAPSE_REAL_DISPLAY !== '1') { delete env.WAYLAND_DISPLAY; env.XDG_SESSION_TYPE = 'x11'; }
   const executablePath = process.env.SYNAPSE_ELECTRON || (require('electron') as unknown as string);

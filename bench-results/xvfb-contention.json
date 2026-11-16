@@ -1,0 +1,4006 @@
+{
+  "date": "2026-11-16T05:22:05.606Z",
+  "platform": "linux 6.18.57 x64",
+  "cpu": "AMD Ryzen 5 7235HS",
+  "cores": 8,
+  "ramGiB": 31.037094116210938,
+  "display": "X11 (may be Xvfb)",
+  "viewport": "1600x900",
+  "startupMs": 2184.29794,
+  "seconds": 15,
+  "workloads": [
+    {
+      "workspace": "cinematic",
+      "elapsedMs": 15909.700000001118,
+      "intervalsMs": [
+        1483.2999999999993,
+        649.8999999999996,
+        33.30000000000109,
+        533.2999999999993,
+        1400,
+        16.700000000000728,
+        516.6000000000004,
+        1266.699999999999,
+        583.3000000000011,
+        33.29999999999927,
+        1483.2999999999993,
+        566.6000000000022,
+        50,
+        1483.2999999999993,
+        883.2999999999993,
+        133.29999999999927,
+        1333.2999999999993,
+        999.9000000000015,
+        116.70000000000073,
+        1433.2999999999993
+      ],
+      "schedulerWorkMs": [
+        1.799999998882413,
+        9.300000000745058,
+        2,
+        1.800000000745058,
+        3.900000000372529,
+        1.8999999985098839,
+        2.799999998882413,
+        9.699999999254942,
+        2,
+        1.800000000745058,
+        2.400000000372529,
+        2,
+        2.099999999627471,
+        2.599999999627471,
+        3.299999998882413,
+        19,
+        3,
+        10.699999999254942,
+        1.8999999985098839,
+        1.6000000014901161
+      ],
+      "views": [
+        {
+          "engine": "Neural Sphere",
+          "preset": "Neural Sphere",
+          "size": "1997×1124",
+          "fps": "0.7",
+          "renderMs": "1.60",
+          "throttle": 1,
+          "nodes": 32000,
+          "edges": 65651,
+          "firing": "1073/s",
+          "pending": 541,
+          "genMs": "462"
+        }
+      ],
+      "profile": "cinematic",
+      "quality": 3,
+      "renderScale": 1.125,
+      "fps": 1.2570947283731682,
+      "frameMs": {
+        "mean": 749.97,
+        "p50": 649.8999999999996,
+        "p95": 1483.2999999999993
+      },
+      "workMs": {
+        "mean": 4.279999999795109,
+        "p50": 2.400000000372529,
+        "p95": 19
+      },
+      "processMetrics": [
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.48,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 263812,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 20,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 810992,
+              "peakWorkingSetSize": 831080
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 227488,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.16,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.64,
+              "percentCPUUsage": 2.103808208428487,
+              "idleWakeupsPerSecond": 254
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 263960,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 22.7,
+              "percentCPUUsage": 35.501651484232006,
+              "idleWakeupsPerSecond": 147
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 715228,
+              "peakWorkingSetSize": 831080
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.01,
+              "percentCPUUsage": 0.13147183242284707,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 227500,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.18,
+              "percentCPUUsage": 0.2629326030117352,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.76,
+              "percentCPUUsage": 1.494760863174573,
+              "idleWakeupsPerSecond": 213
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 264496,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 26.04,
+              "percentCPUUsage": 41.605296777806785,
+              "idleWakeupsPerSecond": 272
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 817808,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.06,
+              "percentCPUUsage": 0.6229033074670659,
+              "idleWakeupsPerSecond": 25
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 227700,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.18,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.91,
+              "percentCPUUsage": 1.860063688580697,
+              "idleWakeupsPerSecond": 313
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 264276,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 28.86,
+              "percentCPUUsage": 34.966214205508095,
+              "idleWakeupsPerSecond": 128
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 709704,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.07,
+              "percentCPUUsage": 0.12397620450321248,
+              "idleWakeupsPerSecond": 1
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 227700,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.2,
+              "percentCPUUsage": 0.24794724476062677,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.97,
+              "percentCPUUsage": 0.7556728359796996,
+              "idleWakeupsPerSecond": 38
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 264128,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 32.14,
+              "percentCPUUsage": 41.31469402438373,
+              "idleWakeupsPerSecond": 259
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 775116,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.11,
+              "percentCPUUsage": 0.5039138992555176,
+              "idleWakeupsPerSecond": 29
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 227728,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.21,
+              "percentCPUUsage": 0.12598317267959153,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.08,
+              "percentCPUUsage": 1.3733163141987923,
+              "idleWakeupsPerSecond": 196
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 264240,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 35.27,
+              "percentCPUUsage": 39.07631091659792,
+              "idleWakeupsPerSecond": 196
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 790624,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.12,
+              "percentCPUUsage": 0.12484606480209902,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 227744,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.23,
+              "percentCPUUsage": 0.24969287776035476,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.2,
+              "percentCPUUsage": 1.4739132100945367,
+              "idleWakeupsPerSecond": 182
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 264708,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 38.05,
+              "percentCPUUsage": 34.14579024167359,
+              "idleWakeupsPerSecond": 155
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 765416,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.15,
+              "percentCPUUsage": 0.3684620100929114,
+              "idleWakeupsPerSecond": 21
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 227840,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.24,
+              "percentCPUUsage": 0.12281777379520677,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.34,
+              "percentCPUUsage": 1.7774347046665278,
+              "idleWakeupsPerSecond": 330
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 265468,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 40.91,
+              "percentCPUUsage": 36.310119909727455,
+              "idleWakeupsPerSecond": 215
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 689780,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.16,
+              "percentCPUUsage": 0.12696465100972448,
+              "idleWakeupsPerSecond": 3
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 228052,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.26,
+              "percentCPUUsage": 0.25393729780242663,
+              "idleWakeupsPerSecond": 16
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.47,
+              "percentCPUUsage": 1.5508196439699837,
+              "idleWakeupsPerSecond": 187
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 265696,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 44.25,
+              "percentCPUUsage": 39.842310338673954,
+              "idleWakeupsPerSecond": 185
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 721660,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.2,
+              "percentCPUUsage": 0.4771183577967819,
+              "idleWakeupsPerSecond": 13
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 217600,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.27,
+              "percentCPUUsage": 0.11927515059680514,
+              "idleWakeupsPerSecond": 14
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.59,
+              "percentCPUUsage": 1.5720699759787709,
+              "idleWakeupsPerSecond": 335
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 266172,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 46.68,
+              "percentCPUUsage": 31.836652555474384,
+              "idleWakeupsPerSecond": 186
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 648644,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.2,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 1
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 217600,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.28,
+              "percentCPUUsage": 0.1310217600939164,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.77,
+              "percentCPUUsage": 2.201895195660407,
+              "idleWakeupsPerSecond": 291
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 266496,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 48.99,
+              "percentCPUUsage": 28.237565203105106,
+              "idleWakeupsPerSecond": 200
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 679340,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.22,
+              "percentCPUUsage": 0.24446602264537662,
+              "idleWakeupsPerSecond": 6
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 217668,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.3,
+              "percentCPUUsage": 0.24444809486932784,
+              "idleWakeupsPerSecond": 16
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.9,
+              "percentCPUUsage": 1.5974959128681492,
+              "idleWakeupsPerSecond": 119
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 266600,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 51.38,
+              "percentCPUUsage": 29.390353077747935,
+              "idleWakeupsPerSecond": 164
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 700684,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.26,
+              "percentCPUUsage": 0.4919158548415342,
+              "idleWakeupsPerSecond": 26
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 217660,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.31,
+              "percentCPUUsage": 0.12299070091908491,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.96,
+              "percentCPUUsage": 0.767114320490135,
+              "idleWakeupsPerSecond": 106
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 266560,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 54.02,
+              "percentCPUUsage": 33.753099148194515,
+              "idleWakeupsPerSecond": 94
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 767704,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.26,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 2
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 217664,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.33,
+              "percentCPUUsage": 0.25571549707512614,
+              "idleWakeupsPerSecond": 14
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 4.13,
+              "percentCPUUsage": 2.0898631311755453,
+              "idleWakeupsPerSecond": 226
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 266652,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 56.38,
+              "percentCPUUsage": 29.011589884297845,
+              "idleWakeupsPerSecond": 234
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 743628,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.3,
+              "percentCPUUsage": 0.49170155289184436,
+              "idleWakeupsPerSecond": 23
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 217800,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.34,
+              "percentCPUUsage": 0.12292913577867248,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 4.24,
+              "percentCPUUsage": 1.3939564132639768,
+              "idleWakeupsPerSecond": 208
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 267128,
+              "peakWorkingSetSize": 271484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 58.9,
+              "percentCPUUsage": 31.935374966924076,
+              "idleWakeupsPerSecond": 219
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 668948,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95632,
+              "peakWorkingSetSize": 95632
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 2.31,
+              "percentCPUUsage": 0.12673757211367853,
+              "idleWakeupsPerSecond": 10
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 217812,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.35,
+              "percentCPUUsage": 0.12673795761274356,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ]
+      ],
+      "nvidiaSystemSamples": [
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 10, 1961, 71",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 10, 1960, 71",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1960, 71",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1961, 71",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1961, 71",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1973, 71",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 13, 1961, 71",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1973, 71",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1960, 71",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1970, 71",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1970, 71",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1965, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1965, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1965, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1961, 72"
+      ]
+    },
+    {
+      "workspace": "neural-lab",
+      "elapsedMs": 15149.200000001118,
+      "intervalsMs": [
+        233.29999999999927,
+        150,
+        150,
+        183.39999999999782,
+        283.3000000000029,
+        233.29999999999927,
+        216.59999999999854,
+        233.29999999999927,
+        200,
+        150,
+        233.40000000000146,
+        183.29999999999927,
+        183.29999999999927,
+        250,
+        250,
+        199.90000000000146,
+        166.6999999999971,
+        183.40000000000146,
+        233.3000000000029,
+        250,
+        183.29999999999563,
+        200,
+        316.70000000000437,
+        450,
+        183.29999999999563,
+        233.3000000000029,
+        300,
+        200,
+        166.6999999999971,
+        166.60000000000582,
+        166.6999999999971,
+        266.59999999999854,
+        316.59999999999854,
+        283.40000000000146,
+        283.3000000000029,
+        350,
+        283.29999999999563,
+        500,
+        566.6000000000058,
+        283.3999999999942,
+        266.6000000000058,
+        300,
+        316.59999999999854,
+        383.40000000000146,
+        283.29999999999563,
+        333.3000000000029,
+        266.6999999999971,
+        266.70000000000437,
+        233.29999999999563,
+        316.59999999999854,
+        333.40000000000146,
+        349.90000000000146,
+        250,
+        400,
+        233.3000000000029,
+        266.6999999999971,
+        200,
+        316.59999999999854
+      ],
+      "schedulerWorkMs": [
+        4.599999999627471,
+        4.300000000745058,
+        3.299999998882413,
+        8.400000000372529,
+        5.700000001117587,
+        6,
+        11.099999999627471,
+        5.899999998509884,
+        3.300000000745058,
+        4,
+        4.099999999627471,
+        5.800000000745058,
+        8,
+        3.100000001490116,
+        4.200000001117587,
+        5.300000000745058,
+        5.099999999627471,
+        5,
+        6.599999999627471,
+        5.100000001490116,
+        8.399999998509884,
+        6.599999999627471,
+        32.5,
+        9.599999999627471,
+        4,
+        8.099999999627471,
+        6.599999999627471,
+        3.099999999627471,
+        3.400000000372529,
+        4.5,
+        3.600000001490116,
+        4,
+        3.200000001117587,
+        7.099999999627471,
+        8.699999999254942,
+        5,
+        15.800000000745058,
+        19.799999998882413,
+        15.900000000372529,
+        14.699999999254942,
+        9.699999999254942,
+        5.5,
+        9.099999999627471,
+        8.400000000372529,
+        4.700000001117587,
+        5.899999998509884,
+        15.099999999627471,
+        7,
+        5.599999999627471,
+        3.800000000745058,
+        8.299999998882413,
+        4.700000001117587,
+        22.300000000745058,
+        3.799999998882413,
+        25.699999999254942,
+        3.800000000745058,
+        16.09999999962747,
+        8.400000000372529
+      ],
+      "views": [
+        {
+          "engine": "Neural Sphere",
+          "preset": "Neural Sphere",
+          "size": "770×436",
+          "fps": "3.5",
+          "renderMs": "5.00",
+          "throttle": 1,
+          "nodes": 9000,
+          "edges": 18460,
+          "firing": "615/s",
+          "pending": 198,
+          "genMs": "157"
+        },
+        {
+          "engine": "Wave Laboratory",
+          "preset": "Wave Laboratory",
+          "size": "145×96",
+          "fps": "3.5",
+          "renderMs": "3.30",
+          "throttle": 1,
+          "mode": "fourier",
+          "samples": 1024
+        }
+      ],
+      "profile": "balanced",
+      "quality": 1,
+      "renderScale": 0.68,
+      "fps": 3.8285850077889076,
+      "frameMs": {
+        "mean": 261.77068965517236,
+        "p50": 250,
+        "p95": 450
+      },
+      "workMs": {
+        "mean": 7.955172413799526,
+        "p50": 5.899999998509884,
+        "p95": 22.300000000745058
+      },
+      "processMetrics": [
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.51,
+              "percentCPUUsage": 2.0247353144831646,
+              "idleWakeupsPerSecond": 234
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 273104,
+              "peakWorkingSetSize": 273484
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 69.72,
+              "percentCPUUsage": 17.24988275819057,
+              "idleWakeupsPerSecond": 1024
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 349620,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.35,
+              "percentCPUUsage": 1.65800676976918,
+              "idleWakeupsPerSecond": 41
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 218692,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.46,
+              "percentCPUUsage": 0.17536540730497038,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.68,
+              "percentCPUUsage": 2.3026668674953377,
+              "idleWakeupsPerSecond": 287
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 276664,
+              "peakWorkingSetSize": 276664
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 70.82,
+              "percentCPUUsage": 14.901320744697568,
+              "idleWakeupsPerSecond": 1323
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 350504,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.43,
+              "percentCPUUsage": 1.0838463539408654,
+              "idleWakeupsPerSecond": 55
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 220856,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.47,
+              "percentCPUUsage": 0.1354816752905269,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.83,
+              "percentCPUUsage": 1.7911867878241332,
+              "idleWakeupsPerSecond": 196
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 280056,
+              "peakWorkingSetSize": 280056
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 72.15,
+              "percentCPUUsage": 15.880976262119692,
+              "idleWakeupsPerSecond": 1261
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 338400,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.51,
+              "percentCPUUsage": 0.9550715253065302,
+              "idleWakeupsPerSecond": 44
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 223204,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.49,
+              "percentCPUUsage": 0.2387656009443657,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.89,
+              "percentCPUUsage": 0.7607069503258361,
+              "idleWakeupsPerSecond": 42
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 280500,
+              "peakWorkingSetSize": 280888
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 73.42,
+              "percentCPUUsage": 16.10086290482894,
+              "idleWakeupsPerSecond": 1259
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 360440,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.59,
+              "percentCPUUsage": 1.0143829356445033,
+              "idleWakeupsPerSecond": 37
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 224492,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.5,
+              "percentCPUUsage": 0.12680185435031802,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.11,
+              "percentCPUUsage": 2.796110660909051,
+              "idleWakeupsPerSecond": 279
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 280632,
+              "peakWorkingSetSize": 280888
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 74.45,
+              "percentCPUUsage": 13.088353246267404,
+              "idleWakeupsPerSecond": 1178
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 354444,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.67,
+              "percentCPUUsage": 1.0165959285333062,
+              "idleWakeupsPerSecond": 35
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 226340,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.52,
+              "percentCPUUsage": 0.2541484654007362,
+              "idleWakeupsPerSecond": 14
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.27,
+              "percentCPUUsage": 1.9394842135682437,
+              "idleWakeupsPerSecond": 380
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 280812,
+              "peakWorkingSetSize": 281004
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 75.44,
+              "percentCPUUsage": 12.003165925946043,
+              "idleWakeupsPerSecond": 1167
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 339292,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.73,
+              "percentCPUUsage": 0.7274095684424512,
+              "idleWakeupsPerSecond": 43
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 227340,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.53,
+              "percentCPUUsage": 0.12123022492571012,
+              "idleWakeupsPerSecond": 16
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.39,
+              "percentCPUUsage": 1.5146252211352822,
+              "idleWakeupsPerSecond": 119
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 280828,
+              "peakWorkingSetSize": 281204
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 76.77,
+              "percentCPUUsage": 16.78789292505178,
+              "idleWakeupsPerSecond": 1290
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 340716,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.81,
+              "percentCPUUsage": 1.0098327414030415,
+              "idleWakeupsPerSecond": 40
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 229384,
+              "peakWorkingSetSize": 229868
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.55,
+              "percentCPUUsage": 0.2524630293139873,
+              "idleWakeupsPerSecond": 14
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.55,
+              "percentCPUUsage": 1.9572420893167854,
+              "idleWakeupsPerSecond": 214
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 280640,
+              "peakWorkingSetSize": 281204
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 77.64,
+              "percentCPUUsage": 10.641472877698897,
+              "idleWakeupsPerSecond": 1089
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 365516,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.88,
+              "percentCPUUsage": 0.8561333885172454,
+              "idleWakeupsPerSecond": 40
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 230812,
+              "peakWorkingSetSize": 230812
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.56,
+              "percentCPUUsage": 0.12229519712518234,
+              "idleWakeupsPerSecond": 16
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.72,
+              "percentCPUUsage": 2.1584319525124656,
+              "idleWakeupsPerSecond": 343
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 280852,
+              "peakWorkingSetSize": 281436
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 78.38,
+              "percentCPUUsage": 9.39565138781389,
+              "idleWakeupsPerSecond": 1098
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 340848,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 3.93,
+              "percentCPUUsage": 0.6348522724156179,
+              "idleWakeupsPerSecond": 38
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 232776,
+              "peakWorkingSetSize": 232776
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.57,
+              "percentCPUUsage": 0.12697767732432638,
+              "idleWakeupsPerSecond": 14
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.83,
+              "percentCPUUsage": 1.3761532163953394,
+              "idleWakeupsPerSecond": 187
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 281188,
+              "peakWorkingSetSize": 281436
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 79.07,
+              "percentCPUUsage": 8.632648526594563,
+              "idleWakeupsPerSecond": 783
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 341516,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 4.01,
+              "percentCPUUsage": 1.000945893869707,
+              "idleWakeupsPerSecond": 32
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 234608,
+              "peakWorkingSetSize": 234880
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.59,
+              "percentCPUUsage": 0.2502447393550893,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.98,
+              "percentCPUUsage": 1.843500113559607,
+              "idleWakeupsPerSecond": 148
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 281180,
+              "peakWorkingSetSize": 281512
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 79.93,
+              "percentCPUUsage": 10.568797958993065,
+              "idleWakeupsPerSecond": 1313
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 341496,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 4.08,
+              "percentCPUUsage": 0.8602230877978092,
+              "idleWakeupsPerSecond": 33
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 236692,
+              "peakWorkingSetSize": 236692
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.6,
+              "percentCPUUsage": 0.12288865010258744,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 7.16,
+              "percentCPUUsage": 2.2864808011828726,
+              "idleWakeupsPerSecond": 268
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 281508,
+              "peakWorkingSetSize": 281512
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 80.8,
+              "percentCPUUsage": 11.051716954095994,
+              "idleWakeupsPerSecond": 1109
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 340432,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 4.13,
+              "percentCPUUsage": 0.6351354921842767,
+              "idleWakeupsPerSecond": 39
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 238200,
+              "peakWorkingSetSize": 238200
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.62,
+              "percentCPUUsage": 0.2540428377194676,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 7.32,
+              "percentCPUUsage": 1.984666466876909,
+              "idleWakeupsPerSecond": 346
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 281560,
+              "peakWorkingSetSize": 281596
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 81.77,
+              "percentCPUUsage": 12.032816592088015,
+              "idleWakeupsPerSecond": 840
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 341196,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 4.2,
+              "percentCPUUsage": 0.8683682715104745,
+              "idleWakeupsPerSecond": 37
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 239496,
+              "peakWorkingSetSize": 239496
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.63,
+              "percentCPUUsage": 0.12405507251267099,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 7.42,
+              "percentCPUUsage": 1.2439098175333567,
+              "idleWakeupsPerSecond": 59
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 281172,
+              "peakWorkingSetSize": 281596
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 82.59,
+              "percentCPUUsage": 10.200060503773525,
+              "idleWakeupsPerSecond": 1678
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 340856,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 4.27,
+              "percentCPUUsage": 0.8703653047521945,
+              "idleWakeupsPerSecond": 30
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 238308,
+              "peakWorkingSetSize": 239724
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.65,
+              "percentCPUUsage": 0.24868074862852568,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 7.6,
+              "percentCPUUsage": 2.243764578237079,
+              "idleWakeupsPerSecond": 308
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 281204,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 83.66,
+              "percentCPUUsage": 13.337814174082657,
+              "idleWakeupsPerSecond": 1404
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 339864,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 4.39,
+              "percentCPUUsage": 1.4965653824472835,
+              "idleWakeupsPerSecond": 43
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 240476,
+              "peakWorkingSetSize": 240476
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.67,
+              "percentCPUUsage": 0.2494213424854338,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ]
+      ],
+      "nvidiaSystemSamples": [
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1961, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1961, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1973, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1973, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1961, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 13, 1961, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 13, 1961, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 17, 1980, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 10, 1961, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 17, 1973, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 13, 1956, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 13, 1968, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 17, 1968, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 17, 1963, 72",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1963, 72"
+      ]
+    },
+    {
+      "workspace": "scientific",
+      "elapsedMs": 15235.699999999255,
+      "intervalsMs": [
+        500,
+        333.29999999999563,
+        299.90000000000146,
+        283.40000000000146,
+        250,
+        299.90000000000146,
+        416.6999999999971,
+        233.3000000000029,
+        366.6999999999971,
+        349.90000000000146,
+        283.40000000000146,
+        483.29999999999563,
+        416.70000000000437,
+        483.29999999999563,
+        316.6000000000058,
+        250,
+        283.3999999999942,
+        416.6000000000058,
+        400,
+        350,
+        483.29999999999563,
+        333.3000000000029,
+        633.2999999999956,
+        466.70000000000437,
+        366.59999999999854,
+        450,
+        400,
+        399.90000000000146,
+        333.40000000000146,
+        316.59999999999854,
+        316.59999999999854,
+        366.6999999999971,
+        366.6000000000058,
+        300.09999999999854,
+        249.90000000000146,
+        266.6999999999971,
+        316.6999999999971,
+        283.3000000000029,
+        283.3000000000029,
+        316.59999999999854,
+        366.70000000000437,
+        416.59999999999127,
+        333.40000000000873
+      ],
+      "schedulerWorkMs": [
+        28.699999999254942,
+        19.699999999254942,
+        18.90000000037253,
+        13.599999999627471,
+        15.200000001117587,
+        34,
+        25.5,
+        11.099999999627471,
+        36,
+        17,
+        29.300000000745058,
+        12,
+        26.800000000745058,
+        16.299999998882413,
+        19.300000000745058,
+        7.5,
+        27.700000001117587,
+        46.399999998509884,
+        13.200000001117587,
+        12.100000001490116,
+        25.700000001117587,
+        16.199999999254942,
+        21.90000000037253,
+        22.600000001490116,
+        54.5,
+        5.900000000372529,
+        22,
+        12.799999998882413,
+        25.5,
+        17.59999999962747,
+        15.599999999627471,
+        11.900000000372529,
+        24.699999999254942,
+        15,
+        12.5,
+        29.300000000745058,
+        18.199999999254942,
+        12.400000000372529,
+        14.5,
+        21.59999999962747,
+        21.800000000745058,
+        11.199999999254942,
+        16.699999999254942
+      ],
+      "views": [
+        {
+          "engine": "Mathematical Chaos",
+          "preset": "Mathematical Chaos · Lorenz",
+          "size": "266×199",
+          "fps": "3.2",
+          "renderMs": "1.50",
+          "throttle": 1,
+          "system": "LORENZ",
+          "trajectories": 128,
+          "trail": 600
+        },
+        {
+          "engine": "Molecular Laboratory",
+          "preset": "Molecular Laboratory",
+          "size": "266×201",
+          "fps": "3.2",
+          "renderMs": "0.80",
+          "throttle": 1,
+          "molecule": "Benzene",
+          "atoms": 12,
+          "bonds": 12
+        },
+        {
+          "engine": "Orbital Mechanics",
+          "preset": "Orbital Mechanics",
+          "size": "537×201",
+          "fps": "3.2",
+          "renderMs": "0.90",
+          "throttle": 1,
+          "scenario": "planetary",
+          "bodies": 9,
+          "simTime": "3.70"
+        },
+        {
+          "engine": "DNA Helix",
+          "preset": "DNA Helix",
+          "size": "266×201",
+          "fps": "3.2",
+          "renderMs": "0.50",
+          "throttle": 1,
+          "basePairs": 44
+        },
+        {
+          "engine": "Electromagnetic Field",
+          "preset": "Electromagnetic Field",
+          "size": "266×201",
+          "fps": "3.2",
+          "renderMs": "11.00",
+          "throttle": 1,
+          "charges": 4,
+          "lines": 56
+        },
+        {
+          "engine": "Wave Laboratory",
+          "preset": "Wave Laboratory",
+          "size": "266×201",
+          "fps": "3.2",
+          "renderMs": "1.90",
+          "throttle": 1,
+          "mode": "fourier",
+          "samples": 1024
+        }
+      ],
+      "profile": "balanced",
+      "quality": 1,
+      "renderScale": 0.51,
+      "fps": 2.822318633210296,
+      "frameMs": {
+        "mean": 357.7372093023257,
+        "p50": 333.40000000000873,
+        "p95": 483.29999999999563
+      },
+      "workMs": {
+        "mean": 20.474418604703143,
+        "p50": 18.199999999254942,
+        "p95": 36
+      },
+      "processMetrics": [
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 8.47,
+              "percentCPUUsage": 3.171502150278458,
+              "idleWakeupsPerSecond": 254
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 281948,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 90.17,
+              "percentCPUUsage": 7.928453634403146,
+              "idleWakeupsPerSecond": 1104
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 338580,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.43,
+              "percentCPUUsage": 4.755986201298701,
+              "idleWakeupsPerSecond": 13
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 255796,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.75,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 12
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 8.63,
+              "percentCPUUsage": 2.378822768188479,
+              "idleWakeupsPerSecond": 376
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 282004,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 91.12,
+              "percentCPUUsage": 12.807320810944917,
+              "idleWakeupsPerSecond": 2416
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 329700,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.5,
+              "percentCPUUsage": 0.9145703494829385,
+              "idleWakeupsPerSecond": 32
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 255836,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.77,
+              "percentCPUUsage": 0.3657992347480009,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 8.72,
+              "percentCPUUsage": 0.8209587484648071,
+              "idleWakeupsPerSecond": 39
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 282152,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 92.01,
+              "percentCPUUsage": 14.777742749054225,
+              "idleWakeupsPerSecond": 3304
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 329604,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.57,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 33
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 255788,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.77,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 13
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 8.88,
+              "percentCPUUsage": 2.3816328474802324,
+              "idleWakeupsPerSecond": 95
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 282328,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 92.87,
+              "percentCPUUsage": 11.902948122190905,
+              "idleWakeupsPerSecond": 1389
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 329496,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.66,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 76
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 256052,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.79,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 19
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 9,
+              "percentCPUUsage": 2.87463707706902,
+              "idleWakeupsPerSecond": 247
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 282744,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 93.46,
+              "percentCPUUsage": 6.464662716997179,
+              "idleWakeupsPerSecond": 1253
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 329996,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.72,
+              "percentCPUUsage": 0.7176525298686983,
+              "idleWakeupsPerSecond": 23
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 256204,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.8,
+              "percentCPUUsage": 0.7172613241217852,
+              "idleWakeupsPerSecond": 17
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 9.13,
+              "percentCPUUsage": 0.6976108224552553,
+              "idleWakeupsPerSecond": 11
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 282628,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 94.33,
+              "percentCPUUsage": 13.94871337067869,
+              "idleWakeupsPerSecond": 1523
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 329748,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.79,
+              "percentCPUUsage": 0.6970545263932726,
+              "idleWakeupsPerSecond": 22
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 256220,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.81,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 17
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 9.25,
+              "percentCPUUsage": 1.2373647383574584,
+              "idleWakeupsPerSecond": 156
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 282880,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 95.14,
+              "percentCPUUsage": 9.027929226699445,
+              "idleWakeupsPerSecond": 2015
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 329760,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.85,
+              "percentCPUUsage": 0.5309787141253082,
+              "idleWakeupsPerSecond": 24
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 256044,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.82,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 16
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 9.38,
+              "percentCPUUsage": 1.2023161418155937,
+              "idleWakeupsPerSecond": 442
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 283576,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 95.84,
+              "percentCPUUsage": 9.621814578011268,
+              "idleWakeupsPerSecond": 1843
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 330092,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.92,
+              "percentCPUUsage": 1.203340473153474,
+              "idleWakeupsPerSecond": 29
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 256364,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.84,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 14
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 9.51,
+              "percentCPUUsage": 1.4247449706502535,
+              "idleWakeupsPerSecond": 238
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 283900,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 96.47,
+              "percentCPUUsage": 6.589201403036874,
+              "idleWakeupsPerSecond": 1321
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 332164,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95956,
+              "peakWorkingSetSize": 95956
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 5.98,
+              "percentCPUUsage": 0.5332127561554081,
+              "idleWakeupsPerSecond": 27
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 255136,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.85,
+              "percentCPUUsage": 0.17772621347904038,
+              "idleWakeupsPerSecond": 14
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 9.64,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 5
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 280912,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 97.1,
+              "percentCPUUsage": 7.150075314126642,
+              "idleWakeupsPerSecond": 2188
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 331116,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95624,
+              "peakWorkingSetSize": 95624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.03,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 24
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 253620,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.86,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 14
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 78928,
+              "peakWorkingSetSize": 78928
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 9.8,
+              "percentCPUUsage": 1.2079804017259623,
+              "idleWakeupsPerSecond": 329
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 280764,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 97.82,
+              "percentCPUUsage": 7.85062080293734,
+              "idleWakeupsPerSecond": 604
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 330952,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95624,
+              "peakWorkingSetSize": 95624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.11,
+              "percentCPUUsage": 1.2079862386207696,
+              "idleWakeupsPerSecond": 39
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 253356,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.88,
+              "percentCPUUsage": 0.6040836051709556,
+              "idleWakeupsPerSecond": 14
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 79000,
+              "peakWorkingSetSize": 79000
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 9.97,
+              "percentCPUUsage": 1.7782625189681336,
+              "idleWakeupsPerSecond": 384
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 281528,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 98.79,
+              "percentCPUUsage": 13.62707783312873,
+              "idleWakeupsPerSecond": 2348
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 331300,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95624,
+              "peakWorkingSetSize": 95624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.18,
+              "percentCPUUsage": 1.196527199456298,
+              "idleWakeupsPerSecond": 24
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 253328,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.88,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 14
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 79000,
+              "peakWorkingSetSize": 79000
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 10.07,
+              "percentCPUUsage": 0.5915003761942392,
+              "idleWakeupsPerSecond": 38
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 281336,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 99.63,
+              "percentCPUUsage": 14.188824881523312,
+              "idleWakeupsPerSecond": 2733
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 331788,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95624,
+              "peakWorkingSetSize": 95624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.25,
+              "percentCPUUsage": 1.1816811068097919,
+              "idleWakeupsPerSecond": 43
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 253192,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.9,
+              "percentCPUUsage": 0.5907372400756143,
+              "idleWakeupsPerSecond": 14
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 79000,
+              "peakWorkingSetSize": 79000
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 10.17,
+              "percentCPUUsage": 1.7713335874606586,
+              "idleWakeupsPerSecond": 272
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 281144,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 100.72,
+              "percentCPUUsage": 12.575327985807945,
+              "idleWakeupsPerSecond": 1962
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 332292,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95600,
+              "peakWorkingSetSize": 95600
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.32,
+              "percentCPUUsage": 0.7084691822990392,
+              "idleWakeupsPerSecond": 33
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 253148,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.9,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 16
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 79000,
+              "peakWorkingSetSize": 79000
+            }
+          }
+        ],
+        [
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 10.35,
+              "percentCPUUsage": 1.2105247867055327,
+              "idleWakeupsPerSecond": 489
+            },
+            "pid": 3460923,
+            "type": "Browser",
+            "creationTime": 1794806523000,
+            "memory": {
+              "workingSetSize": 281172,
+              "peakWorkingSetSize": 290448
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 101.61,
+              "percentCPUUsage": 9.689640805015358,
+              "idleWakeupsPerSecond": 1420
+            },
+            "pid": 3461057,
+            "type": "GPU",
+            "creationTime": 1794806523260,
+            "serviceName": "GPU",
+            "memory": {
+              "workingSetSize": 332156,
+              "peakWorkingSetSize": 831624
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.09,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 0
+            },
+            "pid": 3461059,
+            "type": "Utility",
+            "creationTime": 1794806523270,
+            "serviceName": "network.mojom.NetworkService",
+            "name": "Network Service",
+            "memory": {
+              "workingSetSize": 95600,
+              "peakWorkingSetSize": 95600
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 6.39,
+              "percentCPUUsage": 0,
+              "idleWakeupsPerSecond": 24
+            },
+            "pid": 3461134,
+            "type": "Tab",
+            "creationTime": 1794806523380,
+            "memory": {
+              "workingSetSize": 253204,
+              "peakWorkingSetSize": 258752
+            }
+          },
+          {
+            "cpu": {
+              "cumulativeCPUUsage": 0.92,
+              "percentCPUUsage": 0.6058491096441485,
+              "idleWakeupsPerSecond": 15
+            },
+            "pid": 3461520,
+            "type": "Utility",
+            "creationTime": 1794806524420,
+            "serviceName": "audio.mojom.AudioService",
+            "name": "Audio Service",
+            "memory": {
+              "workingSetSize": 79000,
+              "peakWorkingSetSize": 79000
+            }
+          }
+        ]
+      ],
+      "nvidiaSystemSamples": [
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1951, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1951, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1951, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1957, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1956, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1954, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1954, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1954, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 14, 1952, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1959, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1959, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 13, 1968, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 16, 1954, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 13, 1954, 73",
+        "NVIDIA GeForce RTX 4050 Laptop GPU, 15, 1967, 73"
+      ]
+    }
+  ],
+  "electron": {
+    "version": "45.2.3",
+    "chrome": "156.0.8078.80",
+    "gpuFeatures": {
+      "2d_canvas": "enabled",
+      "direct_rendering_display_compositor": "disabled_off_ok",
+      "gpu_compositing": "enabled",
+      "multiple_raster_threads": "enabled_on",
+      "opengl": "enabled_on",
+      "rasterization": "enabled_force",
+      "raw_draw": "disabled_off_ok",
+      "skia_graphite": "disabled_off",
+      "trees_in_viz": "disabled_off",
+      "video_decode": "enabled",
+      "video_encode": "disabled_software",
+      "vulkan": "disabled_off",
+      "webgl": "enabled",
+      "webgpu": "enabled",
+      "webgpu_on_vk_via_gl_interop": "enabled",
+      "webnn": "disabled_off"
+    },
+    "gpu": {
+      "auxAttributes": {
+        "amdSwitchable": false,
+        "canSupportThreadedTextureMailbox": false,
+        "glImplementationParts": "(gl=none,angle=none)",
+        "glResetNotificationStrategy": 0,
+        "hardwareSupportsVulkan": false,
+        "inProcessGpu": true,
+        "initializationTime": 0,
+        "isAsan": false,
+        "isClangCoverage": false,
+        "jpegDecodeAcceleratorSupported": false,
+        "optimus": false,
+        "passthroughCmdDecoder": false,
+        "sandboxed": false,
+        "skiaBackendType": "None",
+        "subpixelFontRendering": true,
+        "targetCpuBits": 64,
+        "visibilityCallbackCallCount": 0
+      },
+      "gpuDevice": [
+        {
+          "active": true,
+          "deviceId": 10465,
+          "gpuPreference": 0,
+          "vendorId": 4318
+        }
+      ]
+    }
+  },
+  "afterCleanup": {
+    "views": 1,
+    "sharedResources": 0,
+    "renderer": {
+      "geometries": 7,
+      "textures": 15
+    }
+  }
+}

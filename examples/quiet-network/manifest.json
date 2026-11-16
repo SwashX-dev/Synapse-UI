@@ -1,0 +1,21 @@
+{
+  "manifest_version": 1,
+  "id": "quiet-network",
+  "name": "Quiet Neural Network",
+  "version": "1.0.0",
+  "kind": "presets",
+  "permissions": [],
+  "author": "SYNAPSE-UI contributors",
+  "presets": [
+    {
+      "id": "quiet-network",
+      "name": "Quiet Network",
+      "engine": "neural-sphere",
+      "category": "neural",
+      "params": {
+        "nodes": 1500,
+        "seed": 42
+      }
+    }
+  ]
+}

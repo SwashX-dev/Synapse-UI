@@ -1,0 +1,13 @@
+{
+  "manifest_version": 1,
+  "id": "cpu-script",
+  "name": "Isolated CPU meter",
+  "version": "1.0.0",
+  "kind": "script",
+  "permissions": [
+    "script",
+    "monitor.cpu"
+  ],
+  "author": "SYNAPSE-UI contributors",
+  "entry": "index.html"
+}

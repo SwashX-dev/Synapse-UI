@@ -1,166 +1,137 @@
-<p align="center">
-  <br>
-  <img alt="Logo" src="media/logo.png">
-  <br><br>
-  <a href="https://lgtm.com/projects/g/GitSquared/edex-ui/context:javascript"><img alt="undefined" src="https://img.shields.io/lgtm/grade/javascript/g/GitSquared/edex-ui.svg?logo=lgtm&logoWidth=18"/></a>
-  <br>
-  <a href="https://github.com/GitSquared/edex-ui/releases/latest"><img alt="undefined" src="https://img.shields.io/github/release/GitSquared/edex-ui.svg?style=popout"></a>
-  <a href="#featured-in"><img alt="undefined" src="https://img.shields.io/github/downloads/GitSquared/edex-ui/total.svg?style=popout"></a>
-  <a href="https://github.com/GitSquared/edex-ui/blob/master/LICENSE"><img alt="undefined" src="https://img.shields.io/github/license/GitSquared/edex-ui.svg?style=popout"></a>
-  <br>
-  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.8/eDEX-UI-Windows.exe" target="_blank"><img alt="undefined" src="https://badgen.net/badge/Download/Windows/?color=blue&icon=windows&label"></a>
-  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.8/eDEX-UI-macOS.dmg" target="_blank"><img alt="undefined" src="https://badgen.net/badge/Download/macOS/?color=grey&icon=apple&label"></a>
-  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.8/eDEX-UI-Linux-x86_64.AppImage" target="_blank"><img alt="undefined" src="https://badgen.net/badge/Download/Linux64/?color=orange&icon=terminal&label"></a>
-  <a href="https://github.com/GitSquared/edex-ui/releases/download/v2.2.8/eDEX-UI-Linux-arm64-AppImage" target="_blank"><img alt="undefined" src="https://badgen.net/badge/Download/LinuxArm64/?color=orange&icon=terminal&label"></a>
-  <a href="https://aur.archlinux.org/packages/edex-ui" target="_blank"><img alt="undefined" src="https://badgen.net/badge/AUR/Package/cyan"></a>
-  <br>
-  <a href="https://github.com/GitSquared/edex-ui/releases/tag/v2.2.8"><strong><i>(Project archived oct. 18th 2021)</i></strong></a>
-  <br><br><br>
-</p>
+# SYNAPSE-UI
 
-eDEX-UI is a fullscreen, cross-platform terminal emulator and system monitor that looks and feels like a sci-fi computer interface.
-
----
-
-<a href="https://youtu.be/BGeY1rK19zA">
-  <img align="right" width="400" alt="Demo on YouTube" src="media/youtube-demo-teaser.gif">
-</a>
-
-Heavily inspired from the [TRON Legacy movie effects](https://web.archive.org/web/20170511000410/http://jtnimoy.com/blogs/projects/14881671) (especially the [Board Room sequence](https://gmunk.com/TRON-Board-Room)), the eDEX-UI project was originally meant to be *"[DEX-UI](https://github.com/seenaburns/dex-ui) with less « art » and more « distributable software »"*.
-
-While keeping a futuristic look and feel, it strives to maintain a certain level of functionality and to be usable in real-life scenarios, with the larger goal of bringing science-fiction UXs to the mainstream.
-
-<br>
-
-It might or might not be a joke taken too seriously.
-
-
----
-
-<p align="center">
-  <em>Jump to: <br><a href="#features">Features</a> — <a href="#screenshots">Screenshots</a> — <a href="#qa">Questions & Answers</a> — <strong><a href="#how-do-i-get-it">Download</a></strong> — <a href="#featured-in">Featured In</a> — <a href="#useful-commands-for-the-nerds">Contributor Instructions</a> — <a href="#credits">Credits</a></em>
-</p>
-
-## Sponsor
-
-**Want to help support my open-source experiments and learn some cool JavaScript tricks at the same time?**
-
-Click the banner below and sign up to **Bytes**, the only newsletter cool enough to be recommended by eDEX-UI.
-
-[![Bytes by UI.dev](media/sponsor-uidev-bytes.jpg)](https://ui.dev/bytes/?r=gabriel)
-
-## Features
-- Fully featured terminal emulator with tabs, colors, mouse events, and support for `curses` and `curses`-like applications.
-- Real-time system (CPU, RAM, swap, processes) and network (GeoIP, active connections, transfer rates) monitoring.
-- Full support for touch-enabled displays, including an on-screen keyboard.
-- Directory viewer that follows the CWD (current working directory) of the terminal.
-- Advanced customization using themes, on-screen keyboard layouts, CSS injections. See the [wiki](https://github.com/GitSquared/edex-ui/wiki) for more info.
-- Optional sound effects made by a talented sound designer for maximum hollywood hacking vibe.
+A modular neural visualization and terminal workstation, built as a GPLv3 fork of [eDEX-UI](https://github.com/GitSquared/edex-ui). Dense technical panels, thin borders, real shells, and a black scientific workspace. **3.0.0-alpha.1 is an early release:** Linux is the development platform; Windows and macOS packaging is automated but desktop behavior still needs validation.
 
 ## Screenshots
-![Default screenshot](media/screenshot_default.png)
 
-_[neofetch](https://github.com/dylanaraps/neofetch) on eDEX-UI 2.2 with the default "tron" theme & QWERTY keyboard_
+Actual application captures at 1600×900; no mockups.
 
-![Blade screenshot](media/screenshot_blade.png)
+![Neural Laboratory](media/neural-lab.png)
+![Scientific Research](media/scientific.png)
 
-_Checking out available themes in [eDEX's config dir](https://github.com/GitSquared/edex-ui/wiki/userData) with [`ranger`](https://github.com/ranger/ranger) on eDEX-UI 2.2 with the "blade" theme_
+## Features
 
-![Disrupted screenshot](media/screenshot_disrupted.png)
+- Real PTYs and xterm.js terminals, tabs, splits, search, clipboard, shell detection.
+- Grid, freeform, and hybrid layouts with drag/resize, grouping, layering, pinning, undo/redo and saved profiles.
+- Live CPU, RAM, GPU, network, storage, process and connection monitoring. Unavailable measurements are reported as unavailable.
+- Eight coordinated themes, per-module overrides, live theme and animation editors.
+- Validated TOML configuration, backups, live reload and GUI synchronization.
+- Sandboxed extensions with explicit permission approval.
 
-_[cmatrix](https://github.com/abishekvashok/cmatrix) on eDEX-UI 2.2 with the experimental "tron-disrupted" theme, and the user-contributed DVORAK keyboard_
+## Neural visualization
 
-![Horizon screenshot](media/screenshot_horizon.png)
+Neural Sphere combines worker-generated networks, shader-driven pulses, dense fine connections, rotating cameras and configurable trails/bloom. These are artistic simulations, not a trained neural model or measurements of neural activity.
 
-_Editing eDEX-UI source code with `nvim` on eDEX-UI 2.2 with the custom [`horizon-full`](https://github.com/GitSquared/horizon-edex-theme) theme_
+## Terminals
 
-## Q&A
-#### How do I get it?
-Click on the little badges under the eDEX logo at the top of this page, or go to the [Releases](https://github.com/GitSquared/edex-ui/releases) tab, or download it through [one of the available repositories](https://repology.org/project/edex-ui/versions) (Homebrew, AUR...).
+Shells run with your account's permissions. Terminal sessions survive workspace switches. The `synapse` helper controls the app from its own terminals without a localhost service:
 
-Public release binaries are unsigned ([why](https://gaby.dev/posts/code-signing)). On Linux, you will need to `chmod +x` the AppImage file in order to run it.
-#### I have a problem!
-Search through the [Issues](https://github.com/GitSquared/edex-ui/issues) to see if yours has already been reported. If you're confident it hasn't been reported yet, feel free to open up a new one. If you see your issue and it's been closed, it probably means that the fix for it will ship in the next version, and you'll have to wait a bit.
-#### Can you disable the keyboard/the filesystem display?
-You can't disable them (yet) but you can hide them. See the `tron-notype` theme.
-#### Why is the file browser saying that "Tracking Failed"? (Windows only)
-On Linux and macOS, eDEX tracks where you're going in your terminal tab to display the content of the current folder on-screen.
-Sadly, this is technically impossible to do on Windows right now, so the file browser reverts back to a "detached" mode. You can still use it to browse files & directories and click on files to input their path in the terminal.
-#### Can this run on a Raspberry Pi / ARM device?
-We provide prebuilt arm64 builds. For other platforms, see [this issue comment](https://github.com/GitSquared/edex-ui/issues/313#issuecomment-443465345), and the thread on issue [#818](https://github.com/GitSquared/edex-ui/issues/818).
-#### Is this repo actively maintained?
-No, after a 3 years run, this project has been archived. See the [announcement](https://github.com/GitSquared/edex-ui/releases/tag/v2.2.8).
-#### How did you make this?
-Glad you're interested! See [#272](https://github.com/GitSquared/edex-ui/issues/272).
-#### This is so cool.
-Thanks! If you feel like it, you can [follow me on Twitter](https://gaby.dev/twitter) to hear about new stuff I'm making.
+```sh
+synapse help
+synapse theme set terminal-green
+synapse workspace switch scientific
+synapse animation load particle-ocean
+```
 
-<img width="220" src="https://78.media.tumblr.com/35d4ef4447e0112f776b629bffd99188/tumblr_mk4gf8zvyC1s567uwo1_500.gif" />
+## Workspaces
 
+Built-ins: Classic eDEX, Neural Laboratory, Cybersecurity, Scientific Research, Cinematic, Custom. Press **Ctrl+Shift+E** to edit; move/resize modules, change layout mode, duplicate, group and save. Each profile retains its layout. Settings and the command palette expose profile creation and switching.
 
-## Featured in...
-- [Linux Uprising Blog](https://www.linuxuprising.com/2018/11/edex-ui-fully-functioning-sci-fi.html)
-- [My post on r/unixporn](https://www.reddit.com/r/unixporn/comments/9ysbx7/oc_a_little_project_that_ive_been_working_on/)
-- [Korben article (in french)](https://korben.info/une-interface-futuriste-pour-vos-ecrans-tactiles.html)
-- [Hacker News](https://news.ycombinator.com/item?id=18509828)
-- [This tweet that made me smile](https://twitter.com/mikemaccana/status/1065615451940667396)
-- [BoingBoing article](https://boingboing.net/2018/11/23/simulacrum-sf.html) - Apparently i'm a "French hacker"
-- [OReilly 4 short links](https://www.oreilly.com/ideas/four-short-links-23-november-2018)
-- [Hackaday](https://hackaday.com/2018/11/23/look-like-a-movie-hacker/)
-- [Developpez.com (another french link)](https://www.developpez.com/actu/234808/Une-application-de-bureau-ressemble-a-une-interface-d-ordinateur-de-science-fiction-inspiree-des-effets-du-film-TRON-Legacy/)
-- [GitHub Blog's Release Radar November 2018](https://blog.github.com/2018-12-21-release-radar-november-2018/)
-- [opensource.com Productive Tools for 2019](https://opensource.com/article/19/1/productivity-tool-edex-ui)
-- [O'Reilly 4 short links (again)](https://www.oreilly.com/radar/four-short-links-7-july-2020/)
-- [LinuxLinks](https://www.linuxlinks.com/linux-candy-edex-ui-sci-fi-computer-terminal-emulator-system-monitor/)
-- [Linux For Everyone (Youtube)](https://www.youtube.com/watch?v=gbzqCAjm--g)
-- [BestOfJS Rising Stars 2020](https://risingstars.js.org/2020/en#edex-ui)
-- [The Geek Freaks (Youtube/German)](https://youtu.be/TSjMIeLG0Sk)
-- [JSNation Open Source Awards 2021](https://osawards.com/javascript/#nominees) (Nominee - Fun Side Project of the Year)
+## Animation modules
 
+36 presets across 15 rendering engines: neural sphere/graph, particles, attractors, field lines, raymarch, DNA helix, molecule, waves, orbital, matrix, circuits, hologram, grid surface and ENCOM Globe+. Globe+ retains eDEX's geographic grid data and visual lineage; decorative arcs are not IP geolocation. See [graphics](docs/GRAPHICS.md).
 
-## Useful commands for the nerds
+## Performance modes
 
-**IMPORTANT NOTE:** the following instructions are meant for running eDEX from the latest unoptimized, unreleased, development version. If you'd like to get stable software instead, refer to [these](#how-do-i-get-it) instructions.
+Eco (30 FPS cap), Balanced (60), High (120), Cinematic (144), Adaptive. These are caps, not promised frame rates. Battery saver, resolution scaling, visibility suspension and adaptive quality reduce load. See [measured benchmarks](docs/BENCHMARKS.md).
 
-#### Starting from source:
-on *nix systems (You'll need the Xcode command line tools on macOS):
-- clone the repository
-- `npm run install-linux`
-- `npm run start`
+## Installation
 
-on Windows:
-- start cmd or powershell **as administrator**
-- clone the repository
-- `npm run install-windows`
-- `npm run start`
+Get platform artifacts from [Releases](https://github.com/SwashX-dev/Synapse-UI/releases). Linux: AppImage, deb, rpm or tar.gz; Windows: NSIS or portable; macOS: dmg/zip. Windows/macOS packages are unsigned. Check release checksums before installing.
 
-#### Building
-Note: Due to native modules, you can only build targets for the host OS you are using.
+```sh
+chmod +x SYNAPSE-UI-*.AppImage
+./SYNAPSE-UI-*.AppImage
+```
 
-- `npm install` (NOT `install-linux` or `install-windows`)
-- `npm run build-linux` or `build-windows` or `build-darwin`
+## NixOS
 
-The script will minify the source code, recompile native dependencies and create distributable assets in the `dist` folder.
+```sh
+nix run github:SwashX-dev/Synapse-UI/main
+# Or from a checkout:
+nix build
+./result/bin/synapse-ui
+```
 
-#### Getting the bleeding edge
-If you're interested in running the latest in-development version but don't want to compile source code yourself, you can can get pre-built nightly binaries on [GitHub Actions](https://github.com/GitSquared/edex-ui/actions): click the latest commits, and download the artifacts bundle for your OS.
+For AppImage use `appimage-run`. The flake uses nixpkgs Electron, avoiding incompatible generic Linux binaries. Proprietary GPU drivers must be configured by the host. See [troubleshooting](docs/TROUBLESHOOTING.md).
 
-## Credits
-eDEX-UI's source code was primarily written by me, [Squared](https://github.com/GitSquared). If you want to get in touch with me or find other projects I'm involved in, check out [my website](https://gaby.dev).
+## Development
 
-[PixelyIon](https://github.com/PixelyIon) helped me get started with Windows compatibility and offered some precious advice when I started to work on this project seriously.
+```sh
+git clone https://github.com/SwashX-dev/Synapse-UI.git
+cd Synapse-UI
+git switch main
+nix develop  # NixOS; other platforms need Node 24, Python and a C++ toolchain
+npm ci
+npm start
+```
 
-[IceWolf](https://soundcloud.com/iamicewolf) composed the sound effects on v2.1.x and above. He makes really cool stuff, check out his music!
+## Configuration
 
-## Thanks
-Of course, eDEX would never have existed if I hadn't stumbled upon the amazing work of [Seena](https://github.com/seenaburns) on [r/unixporn](https://reddit.com/r/unixporn).
+Settings are generated in `~/.config/synapse-ui/config.toml` on Linux. GUI changes write to disk; valid external edits apply live. `SYNAPSE_CONFIG_DIR` selects an isolated directory. The [configuration guide](docs/CONFIGURATION.md) covers paths, validation and backups.
 
-This project uses a bunch of open-source libraries, frameworks and tools, see [the full dependency graph](https://github.com/GitSquared/edex-ui/network/dependencies).
+## Keyboard shortcuts
 
-I want to namely thank the developers behind [xterm.js](https://github.com/xtermjs/xterm.js), [systeminformation](https://github.com/sebhildebrandt/systeminformation) and [SmoothieCharts](https://github.com/joewalnes/smoothie).
+| Action | Shortcut |
+| --- | --- |
+| Palette / settings | Ctrl+Shift+P / Ctrl+Shift+S |
+| Workspace editor | Ctrl+Shift+E |
+| Theme / animation editor | Ctrl+Shift+T / Ctrl+Shift+A |
+| Module manager | Ctrl+Shift+M |
+| Pause / diagnostics | Ctrl+Shift+Space / Ctrl+Shift+D |
+| Terminal tab / search | Ctrl+Shift+N / Ctrl+Shift+F |
+| Fullscreen | F11 |
 
-Huge thanks to [Rob "Arscan" Scanlon](https://github.com/arscan) for making the fantastic [ENCOM Globe](https://github.com/arscan/encom-globe), also inspired by the TRON: Legacy movie, and distributing it freely. His work really puts the icing on the cake.
+Bindings are editable in Settings and `keybindings.toml`. See [full reference](docs/KEYBINDINGS.md).
 
-## Licensing
+## Themes
 
-Licensed under the [GPLv3.0](https://github.com/GitSquared/edex-ui/blob/master/LICENSE).
+Obsidian, eDEX Classic, Crimson Protocol, Cybernetic Blue, Terminal Green, Ultraviolet, Ghost White, Custom. Color, typography, effects, terminal palette, spacing and per-module overrides apply live. [Theme guide](docs/THEMES.md).
+
+## Modules and extensions
+
+Install local folders through the Module Manager; review and approve requested permissions before enabling. Declarative panels, preset packs, themes and isolated script frames are supported. No automatic downloads or script execution. [API and examples](docs/MODULE_API.md).
+
+## Recording and audio
+
+The animation editor exports PNG, PNG sequences, WebM and GIF; MP4 requires `ffmpeg` on PATH. Audio files and explicitly authorized microphone input can drive parameters. System audio capture varies by OS and compositor; it is not universally available.
+
+## Architecture
+
+Electron main handles privileged services; a narrow isolated preload exposes validated operations. Renderer modules share one WebGL2 renderer and worker-generated geometry. [Architecture](docs/ARCHITECTURE.md).
+
+## Security
+
+The original unauthenticated WebSocket terminal server is removed. Shell traffic uses validated Electron IPC and the helper uses a per-session authenticated OSC sequence. Renderer Node integration is disabled; context isolation and sandbox are enabled. See [security model](docs/SECURITY.md) and [reporting policy](SECURITY.md).
+
+## Tests and builds
+
+```sh
+npm run lint
+npm run typecheck
+npm test
+npm run rebuild:native
+xvfb-run -a npm run test:e2e  # Linux headless; omit wrapper on desktop Windows/macOS
+npm run audit:deps
+npm run dist:linux          # dist:win / dist:mac on their native hosts
+```
+
+CI tests Linux; package workflows build each OS natively. [Build guide](docs/BUILDING.md).
+
+## Known limitations
+
+See [limitations](docs/LIMITATIONS.md): alpha stability, platform validation, renderer workload, unsigned packages, system audio, extension trust and migration differences. Do not use this alpha as your only terminal for critical operations.
+
+## Contributing and license
+
+Read [CONTRIBUTING](CONTRIBUTING.md), [changelog](CHANGELOG.md), and [migration](docs/MIGRATION.md). GPL-3.0; original copyright and full history retained. SYNAPSE-UI is an independent continuation, not endorsed by the original authors. eDEX-UI by Gabriel “Squared” Saillard and its contributors supplies the foundation, typography, audio, keyboard layouts and globe data. Included third-party libraries retain their licenses; production bundles emit linked license comments.

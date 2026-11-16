@@ -1,0 +1,286 @@
+# SYNAPSE-UI configuration
+#
+# This file is regenerated when settings change in the graphical interface;
+# comments you add here will not be preserved (descriptions are regenerated).
+# Edits made while SYNAPSE-UI is running are validated and applied live.
+# Invalid values fall back to their defaults and are reported in the app.
+# Full reference: docs/CONFIGURATION.md
+
+config_version = 1
+
+[application]
+# Title shown in the window title bar and task switcher.
+name = "SYNAPSE-UI"
+# Active theme id. Built-in themes can be overridden by a file with the same
+# id in themes/.
+theme = "obsidian"
+# Active workspace profile id (a file in layouts/ or a built-in profile).
+workspace = "neural-lab"
+# Run as a fullscreen workstation. Toggle at any time with F11.
+fullscreen = true
+# Hide the operating-system window frame when windowed. (requires restart)
+frameless = false
+# Index of the monitor to open on (-1 = primary display). (range -1…16;
+# requires restart)
+display = -1
+# Play the eDEX-style boot log and logo animation on startup.
+boot_animation = true
+# Set to false to show the first-run setup again on next launch.
+first_run_complete = false
+
+[interface]
+# Zoom factor for the whole interface (useful on high-DPI or very large
+# displays). (range 0.5…2.5)
+scale = 1
+# Additional transparency applied to every module background (0 = opaque theme
+# value). (range 0…1)
+panel_transparency = 0.1
+# Enable panel transitions, glows and other interface motion (visualizations
+# are controlled separately).
+animations_enabled = true
+# When reduced, interface transitions are disabled, automatic camera motion
+# slows and visualizations run at half speed. (one of: system | on | off)
+reduced_motion = "system"
+# Show the thin technical title strip above each module.
+show_titles = true
+# Show the mouse cursor (eDEX-UI "nocursor" equivalent when disabled).
+cursor_visible = true
+# Show transient notifications for configuration reloads, errors and command
+# results.
+notifications = true
+# Layout mode given to newly created workspaces. (one of: grid | freeform |
+# hybrid)
+layout_mode = "hybrid"
+# Snap floating modules to grid lines and to the edges of other modules while
+# editing.
+grid_snapping = true
+# Distance in pixels at which edges snap together. (range 2…40 px)
+snap_threshold = 8
+
+[performance]
+# Eco minimises power, Cinematic maximises quality, Adaptive adjusts quality
+# from measured frame times. (one of: eco | balanced | high | cinematic |
+# adaptive)
+mode = "adaptive"
+# Upper bound for visualization frame rate. Individual modules may set lower
+# limits. (range 15…240 fps)
+target_fps = 60
+# Automatically scale render resolution down when frames take longer than the
+# budget, and back up when there is headroom.
+adaptive_quality = true
+# Visualizations beyond this count (lowest priority first) are paused. (range
+# 1…16)
+max_active_visualizations = 8
+# Stop rendering visualizations that are off-screen, fully transparent,
+# covered or in an inactive workspace.
+suspend_hidden = true
+# Switch to the Eco profile while running on battery power.
+battery_saver = true
+# Display a frame-rate readout in each visualization HUD.
+show_fps = false
+
+[graphics]
+# Use the GPU. Disable only if your driver crashes; visualizations will be
+# very slow without it. (requires restart)
+hardware_acceleration = true
+# Multiplier on device pixel ratio for all visualizations. (range 0.25…2)
+resolution_scale = 1
+# Multisample antialiasing for the shared WebGL renderer. Changing it
+# reinitialises graphics.
+antialias = true
+# Which GPU to request on hybrid-graphics laptops. Changing it reinitialises
+# graphics. (one of: high-performance | low-power | default)
+power_preference = "high-performance"
+# Allow GPU acceleration on drivers Chromium blocklists (eDEX-UI default;
+# common on Linux). (requires restart)
+ignore_gpu_blocklist = true
+# Select the Ozone platform on Linux. Automatic follows XDG_SESSION_TYPE. (one
+# of: auto | wayland | x11; requires restart)
+ozone_platform = "auto"
+
+[visualization]
+# Preset used for newly added visualization modules.
+default_animation = "neural-sphere"
+# Geometric complexity (node, particle and segment counts) of visualizations.
+# (one of: auto | low | medium | high | ultra)
+quality = "auto"
+# Global multiplier for automatic camera orbiting. (range 0…4)
+rotation_speed = 1
+# Global multiplier for simulation time in all visualizations. (range 0…4)
+time_scale = 1
+# Hardware-accelerated bloom post-processing.
+glow = true
+# Global multiplier on bloom intensity. (range 0…3)
+glow_strength = 1
+# Temporal accumulation (after-image) motion blur.
+motion_blur = false
+# How long previous frames persist. (range 0…0.98)
+motion_blur_amount = 0.75
+# Overlay labels, statistics and callouts on visualizations.
+hud = true
+# Seed given to newly added visualizations (each module keeps its own seed).
+# (range 0…2147483647)
+seed = 1337
+
+[terminal]
+# "auto" uses $SHELL (or PowerShell on Windows). Otherwise a shell name on
+# PATH or an absolute path.
+default_shell = "auto"
+# Extra arguments passed to the shell.
+shell_args = []
+# Start POSIX shells as login shells (-l) so your profile is loaded.
+login_shell = true
+# Working directory for new terminals. Empty = home directory.
+cwd = ""
+# Terminal font. Empty = the theme monospace font.
+font_family = ""
+# Terminal font size. (range 6…40 px)
+font_size = 13
+# Terminal line height multiplier. (range 1…2)
+line_height = 1.1
+# Extra pixels between characters. (range -2…6 px)
+letter_spacing = 0
+# Shape of the terminal cursor. (one of: block | underline | bar)
+cursor_style = "block"
+# Blink the terminal cursor.
+cursor_blink = true
+# Lines of history kept per terminal. (range 100…100000 lines)
+scrollback = 5000
+# WebGL is faster for heavy output but uses one GPU context per terminal. (one
+# of: dom | webgl)
+renderer = "dom"
+# Terminal background opacity; lower values reveal visualizations behind
+# floating terminals. (range 0…1)
+opacity = 1
+# Copy selected text to the clipboard automatically.
+copy_on_select = false
+# Paste the clipboard on right click.
+right_click_paste = false
+# What happens when a program rings the terminal bell. (one of: none | visual
+# | sound)
+bell = "visual"
+# What terminal tabs display. (one of: process | cwd | shell)
+tab_title = "process"
+# Expose the `synapse` command inside SYNAPSE-UI terminals to control the app
+# (authenticated per session, no network socket).
+app_commands = true
+# Extra environment variables for shells.
+env = {}
+
+[monitoring]
+# Poll system statistics. When disabled, monitoring modules show no data.
+enabled = true
+# Multiplier for every polling interval (higher = less CPU, slower updates).
+# (range 0.25…4)
+interval_scale = 1
+# Unit for CPU and GPU temperatures. (one of: c | f)
+temperature_unit = "c"
+# "auto" uses the default interface; or an interface name such as wlan0.
+network_interface = "auto"
+# Maximum processes sent to the process monitor (sorted by the active column).
+# (range 5…500)
+process_limit = 40
+# Use a 24-hour clock in the clock module.
+clock_24h = true
+# Poll GPU statistics (spawns nvidia-smi on NVIDIA systems).
+gpu = true
+
+[filesystem]
+# Show dotfiles in the filesystem browser.
+show_hidden = false
+# Use a detailed list instead of the eDEX icon grid.
+list_view = false
+# Filesystem browser follows the working directory of the focused terminal.
+follow_terminal = true
+
+[keyboard]
+# Layout used by the on-screen keyboard module.
+layout = "en-US"
+# Highlight on-screen keys when you press them on your physical keyboard.
+show_physical = true
+
+[audio]
+# Play the eDEX-UI interface sound effects.
+ui_sounds = true
+# Volume of interface sounds. (range 0…1)
+volume = 0.6
+# Play sounds for keystrokes and terminal output.
+feedback_sounds = false
+# Source analysed for audio-reactive visualizations. Microphone and system
+# audio require explicit permission each session. (one of: none | file |
+# microphone | system)
+input_source = "none"
+# Input device id for microphone capture (on Linux, PipeWire/PulseAudio
+# "Monitor of …" devices capture system output).
+input_device = "default"
+# Last audio file used as the reactive source.
+file = ""
+# Amplification applied before frequency analysis. (range 0…8)
+gain = 1
+# Temporal smoothing of the frequency spectrum. (range 0…0.99)
+smoothing = 0.8
+# Energy ratio over the running average that counts as a beat (lower = more
+# beats). (range 1.05…3)
+beat_sensitivity = 1.35
+# Play audio files through the speakers while analysing them.
+monitor_file = true
+
+[recording]
+# Where screenshots and recordings are saved. Empty = Videos/SYNAPSE-UI (or
+# Pictures for images).
+output_dir = ""
+# Output format used by the record command. (one of: webm | png | png-sequence
+# | gif | mp4)
+format = "webm"
+# Output width in pixels for offline formats (0 = module size). (range 0…7680
+# px)
+width = 0
+# Output height in pixels for offline formats (0 = module size). (range 0…4320
+# px)
+height = 0
+# Frames per second for recordings. (range 1…120 fps)
+fps = 30
+# Length of recordings. (range 1…600 s)
+duration = 10
+# Bit-rate (WebM/MP4) or palette quality (GIF). (range 0.1…1)
+quality = 0.9
+
+[security]
+# Allow third-party modules that declare the "script" permission to run
+# JavaScript (each still needs individual approval). Declarative modules never
+# need this.
+allow_extension_scripts = false
+# What happens when you click a URL in a terminal. (one of: ask | allow |
+# deny)
+external_links = "ask"
+# Allow opening Chromium developer tools (Ctrl+Shift+I).
+devtools = false
+
+[advanced]
+# Verbosity of the main-process log. (one of: error | warn | info | debug)
+log_level = "info"
+# Watch the configuration directory and apply external edits immediately.
+watch_config = true
+# Number of automatic configuration backups to keep. (range 1…200)
+backup_count = 20
+
+[colors]
+# Overrides the active theme background for every workspace. Empty = theme
+# value.
+# background = "#000000"
+# Overrides the theme foreground (lines, graph strokes).
+# foreground = "#000000"
+# Overrides the theme text color.
+# text = "#000000"
+# Overrides the theme accent color.
+# accent = "#000000"
+# Overrides the theme border color.
+# border = "#000000"
+# Overrides the theme glow color.
+# glow = "#000000"
+# Overrides the theme highlight color.
+# highlight = "#000000"
+# Overrides neural connection color in visualizations.
+# neural = "#000000"
+# Overrides particle color in visualizations.
+# particle = "#000000"
