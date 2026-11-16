@@ -1,0 +1,120 @@
+/* Module-specific styles (eDEX-UI lineage). */
+
+/* visualization */
+.viz-wrap { position: absolute; inset: 0; }
+.viz-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; outline: none; }
+.viz-msg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; white-space: pre-line; color: var(--text-dim); font-family: var(--font-mono); z-index: 2; background: color-mix(in srgb, var(--bg) 70%, transparent); }
+.viz-bar { position: absolute; right: 6px; bottom: 6px; z-index: 3; display: flex; gap: 2px; opacity: 0; transition: opacity var(--t-fast); }
+.mod:hover .viz-bar, .viz-bar:focus-within { opacity: 1; }
+.viz-bar button { padding: 1px 6px; background: color-mix(in srgb, var(--bg) 70%, transparent); }
+.mod.recording { box-shadow: 0 0 0 1px var(--danger), 0 0 18px color-mix(in srgb, var(--danger) 40%, transparent); }
+.mod.recording .mod-title .t::before { content: '● REC '; color: var(--danger); }
+.ext-frame { width: 100%; height: 100%; border: none; background: transparent; }
+
+/* terminal: eDEX skewed tabs */
+.term-body { display: flex; flex-direction: column; }
+.term-tabs { display: flex; margin: 0; padding: 0; list-style: none; border-bottom: var(--border-w) solid var(--line); overflow: hidden; flex: 0 0 auto; }
+.term-tabs > li { flex: 1 1 0; min-width: 0; cursor: pointer; text-align: center; padding: 3px 0 2px; background: var(--surface); transform: skewX(35deg); font-size: .92em; }
+.term-tabs > li > p { margin: 0; transform: skewX(-35deg); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 10px; }
+.term-tabs > li:not(:first-child) { border-left: var(--border-w) solid var(--line); }
+.term-tabs > li.active { background: var(--fg); color: var(--bg); }
+.term-tabs > li.term-add { flex: 0 0 34px; }
+.term-stage { position: relative; flex: 1 1 auto; min-height: 0; }
+.term-tab-content { position: absolute; inset: 0; display: none; gap: 2px; padding: 4px 4px 2px 6px; }
+.term-tab-content.active { display: flex; }
+.term-pane { position: relative; flex: 1 1 0; min-width: 0; min-height: 0; }
+.term-pane + .term-pane { border-left: 1px solid var(--line-soft); }
+.term-tab-content[style*='column'] .term-pane + .term-pane { border-left: none; border-top: 1px solid var(--line-soft); }
+.term-pane .xterm { height: 100%; }
+.term-pane.bell { box-shadow: inset 0 0 0 2px var(--accent); }
+.term-search { position: absolute; right: 8px; top: 30px; z-index: 5; display: flex; gap: 2px; background: var(--surface); border: 1px solid var(--line); padding: 3px; }
+.xterm .xterm-viewport { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+
+/* clock & sysinfo */
+.clock-body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+.clock-time { font-size: clamp(14px, 4.4vh, 52px); color: var(--fg); text-shadow: var(--text-glow); letter-spacing: .08em; line-height: 1; }
+.clock-time em { font-style: normal; opacity: .45; padding: 0 .06em; }
+.clock-date { color: var(--text-dim); font-size: .85em; }
+.clock-body.compact .clock-time { font-size: clamp(12px, 3.2vh, 34px); }
+.sysinfo { display: flex; justify-content: space-between; gap: 6px; height: 100%; align-items: center; }
+.sysinfo .cell, .cpu-stats .cell { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; }
+.sysinfo .v, .cpu-stats .v { font-family: var(--font-mono); color: var(--fg); white-space: nowrap; }
+
+/* cpu */
+.cpu-body { display: flex; flex-direction: column; gap: 4px; }
+.cpu-graphs { flex: 1 1 auto; display: flex; flex-direction: column; gap: 4px; min-height: 0; }
+.cpu-graph { position: relative; flex: 1 1 0; min-height: 20px; }
+.cpu-graph canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cpu-range { position: absolute; left: 2px; top: 0; z-index: 1; display: flex; gap: 8px; }
+.cpu-range i { font-style: normal; color: var(--fg); }
+.cores { display: flex; gap: 2px; height: 14px; align-items: flex-end; }
+.core { flex: 1; height: 100%; background: color-mix(in srgb, var(--border) 25%, transparent); position: relative; }
+.core i { position: absolute; left: 0; right: 0; bottom: 0; background: var(--fg); transition: height var(--t-med); }
+.cpu-stats { display: flex; justify-content: space-between; gap: 6px; }
+
+/* memory point map (eDEX ramwatcher) */
+.mem-pointmap { display: grid; grid-template-columns: repeat(40, 1fr); gap: 1px; margin-bottom: 4px; }
+.mem-pointmap .pt { aspect-ratio: 1; background: color-mix(in srgb, var(--fg) 8%, transparent); transition: background var(--t-med); }
+.mem-pointmap .pt.active { background: var(--fg); }
+.mem-pointmap .pt.available { background: color-mix(in srgb, var(--fg) 45%, transparent); }
+.mem-graph, .net-graph, .conn-graph, .disk-graph, .gpu-graph, .perf-graph { position: relative; height: 56px; min-height: 30px; flex: 1 1 auto; }
+.mem-graph canvas, .net-graph canvas, .conn-graph canvas, .disk-graph canvas, .gpu-graph canvas, .perf-graph canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.mod-body > .row { margin: 3px 0; }
+.gpu-card { border-bottom: 1px dashed var(--line-soft); padding-bottom: 4px; display: flex; flex-direction: column; gap: 3px; }
+.fs-item .row { gap: 6px; }
+
+/* connections, processes, events, telemetry */
+.conn-list { max-height: 50%; font-size: .9em; }
+.conn-row { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; padding: 1px 0; border-bottom: 1px dashed color-mix(in srgb, var(--border) 25%, transparent); }
+.mod[data-type='processes'] .mod-body, .mod[data-type='events'] .mod-body, .mod[data-type='connections'] .mod-body { display: flex; flex-direction: column; }
+.proc-table { flex: 1 1 auto; min-height: 0; }
+.proc-row { display: grid; grid-template-columns: 54px 1fr 54px 54px; gap: 6px; padding: 1px 2px; font-family: var(--font-mono); font-size: .92em; }
+.proc-row.head { color: var(--text-dim); border-bottom: 1px solid var(--line-soft); cursor: pointer; font-family: var(--font-ui); }
+.proc-row:not(.head):hover, .proc-row:focus { background: color-mix(in srgb, var(--fg) 10%, transparent); outline: none; }
+.proc-row .c-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.proc-row .c-cpu, .proc-row .c-mem { text-align: right; }
+.event-list { flex: 1 1 auto; min-height: 0; font-size: .9em; }
+.event { display: grid; grid-template-columns: 62px 44px 1fr; gap: 6px; padding: 1px 0; }
+.event .l { color: var(--text-dim); font-family: var(--font-mono); font-size: .85em; }
+.event.alert .l { color: var(--danger); } .event.warn .l { color: var(--warn); }
+.telemetry { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 6px; }
+.tcell { border: 1px solid var(--line-soft); padding: 3px 5px; display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.tcell .tv { font-family: var(--font-mono); color: var(--fg); font-size: 1.25em; text-shadow: var(--text-glow); }
+.tcell .badge { font-family: var(--font-mono); font-size: .7em; padding: 0 3px; border: 1px solid var(--line-soft); }
+.tcell .badge.live { color: var(--ok); } .tcell .badge.sim { color: var(--warn); }
+canvas.spark { width: 100%; height: 18px; display: block; }
+.mod[data-type='waveform'] .mod-body, .plot-body, .audio-body { display: flex; flex-direction: column; gap: 4px; }
+.mod[data-type='waveform'] canvas.graph, .plot-body canvas.graph, .audio-body canvas.graph { flex: 1 1 auto; min-height: 24px; height: auto; }
+.wave-stats { font-size: .82em; color: var(--text-dim); }
+textarea.notes { width: 100%; height: 100%; resize: none; background: transparent; border: none; color: var(--text); font-family: var(--font-mono); outline: none; user-select: text; }
+
+/* filesystem (eDEX icon grid) */
+.fs-body { display: flex; flex-direction: column; gap: 4px; }
+.fs-crumbs { display: flex; flex-wrap: wrap; font-size: .9em; color: var(--text-dim); border-bottom: 1px solid var(--line-soft); padding-bottom: 2px; }
+.fs-crumbs span { cursor: pointer; }
+.fs-crumbs span:hover { color: var(--fg); }
+.fs-grid { flex: 1 1 auto; min-height: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 4px; align-content: start; }
+.fs-grid .fs-item { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 4px 2px; cursor: pointer; border: 1px solid transparent; min-width: 0; }
+.fs-grid .fs-item:hover, .fs-grid .fs-item:focus { border-color: var(--line); background: color-mix(in srgb, var(--fg) 8%, transparent); outline: none; }
+.fs-grid .ico { font-size: 1.9em; line-height: 1; color: var(--fg); }
+.fs-grid .fs-item.dir .ico, .fs-grid .fs-item.up .ico { text-shadow: var(--text-glow); }
+.fs-grid .nm { font-size: .82em; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fs-grid.list { grid-template-columns: 1fr; gap: 0; }
+.fs-grid.list .fs-item { flex-direction: row; justify-content: flex-start; gap: 8px; padding: 1px 4px; }
+.fs-grid.list .ico { font-size: 1em; width: 20px; text-align: center; }
+.fs-grid.list .nm { flex: 1; font-size: .92em; }
+.fs-grid.list .meta { color: var(--text-dim); font-size: .85em; }
+.fs-footer { display: flex; gap: 8px; align-items: center; font-size: .85em; color: var(--text-dim); }
+
+/* on-screen keyboard */
+.kb { display: flex; flex-direction: column; gap: 3px; height: 100%; justify-content: center; }
+.kb-row { display: flex; gap: 3px; justify-content: center; flex: 1 1 0; max-height: 52px; }
+.kb-key { position: relative; flex: 1 1 0; min-width: 0; border: var(--border-w) solid var(--line); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: .92em; transition: background var(--t-fast), color var(--t-fast); }
+.kb-key .shift, .kb-key .fn { position: absolute; top: 1px; font-size: .7em; color: var(--text-dim); }
+.kb-key .shift { left: 3px; } .kb-key .fn { right: 3px; }
+.kb.shift .kb-key .shift { color: var(--fg); }
+.kb.fn .kb-key .fn { color: var(--fg); }
+.kb-key.space { flex: 6 1 0; }
+.kb-key:hover { background: color-mix(in srgb, var(--fg) 10%, transparent); }
+.kb-key:active, .kb-key.pressed, .kb-key.active { background: var(--fg); color: var(--bg); box-shadow: var(--glow-shadow); }
+.row_1 .kb-key:first-child, .row_2 .kb-key:first-child, .row_3 .kb-key:first-child { flex: 1.6 1 0; }
