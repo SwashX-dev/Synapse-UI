@@ -392,7 +392,7 @@ export class ConfigService extends EventEmitter {
   }
 
   backup(label: string): string | null {
-    return this.backupFile(this.paths.configFile, label);
+    return this.backupFile(this.paths.configFile, label.startsWith('config') ? label : `config-${label}`);
   }
 
   private backupFile(file: string, label: string): string | null {

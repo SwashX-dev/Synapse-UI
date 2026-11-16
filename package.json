@@ -2,7 +2,7 @@
   "name": "synapse-ui",
   "productName": "SYNAPSE-UI",
   "version": "3.0.0-alpha.1",
-  "description": "SYNAPSE-UI — A modular, GPU-accelerated neural visualization and futuristic terminal environment built upon eDEX-UI.",
+  "description": "SYNAPSE-UI \u2014 A modular, GPU-accelerated neural visualization and futuristic terminal environment built upon eDEX-UI.",
   "keywords": [
     "edex-ui",
     "terminal",
@@ -20,7 +20,7 @@
     "watch": "node scripts/build.mjs --watch",
     "start": "node scripts/build.mjs && electron .",
     "start:dev": "node scripts/build.mjs && electron . --dev",
-    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json && tsc --noEmit -p tsconfig.test.json",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest",

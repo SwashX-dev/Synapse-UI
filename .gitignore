@@ -37,3 +37,5 @@ pids
 .env.*
 *.local.toml
 .synapse-test-home/
+# Probe / dev artefacts
+/tmp/

@@ -7,6 +7,7 @@ import { net, protocol } from 'electron';
 import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { safeJoin } from './safe-path';
 
 export const APP_HOST = 'synapse';
 export const APP_ORIGIN = `app://${APP_HOST}`;
@@ -51,15 +52,6 @@ export function registerAppScheme(): void {
   protocol.registerSchemesAsPrivileged([
     { scheme: 'app', privileges: { standard: true, secure: true, supportFetchAPI: true, stream: true, codeCache: true, corsEnabled: false } },
   ]);
-}
-
-/** Resolve `rel` inside `root`, refusing anything that escapes it. */
-export function safeJoin(root: string, rel: string): string | null {
-  const decoded = rel.replace(/\\/g, '/');
-  if (decoded.includes('\0')) return null;
-  const resolved = path.resolve(root, '.' + path.posix.normalize('/' + decoded));
-  const rootResolved = path.resolve(root);
-  return resolved === rootResolved || resolved.startsWith(rootResolved + path.sep) ? resolved : null;
 }
 
 export interface ExtensionResolver {

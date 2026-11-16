@@ -25,7 +25,7 @@ export const Invoke = {
   'app:devtools': z.tuple([]),
   'app:metrics': z.tuple([]),
   'app:gpu-info': z.tuple([]),
-  'app:open-external': z.tuple([z.string().url().max(2048)]),
+  'app:open-external': z.tuple([z.string().max(2048).regex(/^https?:\/\/[^\s]+$/i, 'only http(s) URLs may be opened')]),
   'app:open-path': z.tuple([z.enum(['config', 'themes', 'layouts', 'modules', 'presets', 'backups', 'recordings'])]),
   'app:log': z.tuple([z.enum(['debug', 'info', 'warn', 'error']), shortStr(8192)]),
 
@@ -48,7 +48,7 @@ export const Invoke = {
   'config:import': z.tuple([]),
   'config:backups': z.tuple([]),
   'config:backup-now': z.tuple([]),
-  'config:restore-backup': z.tuple([z.string().regex(/^[0-9TZ:._-]{6,64}$/)]),
+  'config:restore-backup': z.tuple([z.string().regex(/^[0-9A-Za-z:._-]{6,128}$/)]),
   'config:import-theme': z.tuple([]),
   'config:export-theme': z.tuple([z.string().regex(/^[a-z0-9][a-z0-9._-]{0,63}$/)]),
   'config:import-preset': z.tuple([]),
