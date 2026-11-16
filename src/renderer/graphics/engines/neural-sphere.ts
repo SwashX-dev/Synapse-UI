@@ -352,7 +352,7 @@ export class NeuralSphere implements EngineInstance {
     const camDist = camera.position.length();
     this.mesh.edgeUniforms.uFogNear.value = Math.max(0.01, camDist - 1.1);
     this.mesh.edgeUniforms.uFogFar.value = camDist + 1.2;
-    this.mesh.upload(t, input.height, (camera as THREE.PerspectiveCamera).fov ?? 50);
+    this.mesh.upload(t, input.height, (camera as THREE.PerspectiveCamera).fov ?? 50, input.pixelRatio);
     this.rateAcc += dt;
     if (this.rateAcc > 0.25) {
       this.rateAcc = 0;

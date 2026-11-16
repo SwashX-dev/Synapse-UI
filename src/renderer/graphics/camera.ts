@@ -33,6 +33,7 @@ export class CameraRig {
 
   constructor(dom: HTMLElement, fov = 50) {
     this.camera = new THREE.PerspectiveCamera(fov, 1, 0.01, 1000);
+    this.baseFov = fov;
     this.camera.position.set(0, 0.4, 2.6);
     this.controls = new OrbitControls(this.camera, dom);
     this.controls.enableDamping = true;
@@ -59,8 +60,11 @@ export class CameraRig {
     }
   }
 
+  private baseFov = 50;
   setAspect(a: number): void {
     this.camera.aspect = a;
+    // In portrait views widen the vertical FOV so the horizontal extent stays constant.
+    this.camera.fov = a < 1 ? (2 * Math.atan(Math.tan((this.baseFov * Math.PI) / 360) / a) * 180) / Math.PI : this.baseFov;
     this.camera.updateProjectionMatrix();
   }
 

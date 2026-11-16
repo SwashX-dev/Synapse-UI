@@ -21,7 +21,7 @@ float fireAt(float idx) { int i = int(idx + 0.5); return texelFetch(uFire, ivec2
 
 const EDGE_VERT = /* glsl */ `
 ${FIRE_FN}
-uniform float uTime, uPulseSpeed, uPulseWidth, uTrail, uPulseGain, uLineAlpha, uCurv, uGrowth, uBreath, uHighlight, uOpacity, uArc, uFogNear, uFogFar, uLinePulse;
+uniform float uTime, uPulseSpeed, uPulseWidth, uTrail, uPulseGain, uLineAlpha, uCurv, uGrowth, uBreath, uHighlight, uOpacity, uArc, uFogNear, uFogFar, uLinePulse, uInk;
 uniform vec3 uColLine, uColPulse, uColHi;
 attribute float t;
 attribute vec3 iA;
@@ -70,7 +70,7 @@ void main() {
   float hi = (abs(iInfo.x - uHighlight) < 0.5 || abs(iInfo.y - uHighlight) < 0.5) ? 1.0 : 0.0;
   vec4 mv = modelViewMatrix * vec4(p, 1.0);
   float fog = clamp(1.0 - (-mv.z - uFogNear) / max(uFogFar - uFogNear, 1e-3), 0.18, 1.0);
-  vAlpha = (uLineAlpha * breath + pulse * uPulseGain + hi * 0.55 + uLinePulse * 0.15) * reveal * fog * uOpacity;
+  vAlpha = (uLineAlpha * breath + pulse * uPulseGain + hi * 0.55 + uLinePulse * 0.15) * reveal * fog * uOpacity * uInk;
   vColor = mix(uColLine, uColPulse, clamp(pulse * 1.2, 0.0, 1.0)) + hi * uColHi * 0.6;
   gl_Position = projectionMatrix * mv;
 }
@@ -178,7 +178,7 @@ export class NetworkMesh {
     this.edgeUniforms = {
       uFire: { value: this.fireTex }, uTime: { value: 0 }, uPulseSpeed: { value: 0.6 }, uPulseWidth: { value: 0.03 }, uTrail: { value: 0.4 }, uPulseGain: { value: 1.2 },
       uLineAlpha: { value: 0.05 }, uCurv: { value: 0.5 }, uGrowth: { value: 1 }, uBreath: { value: 0.3 }, uHighlight: { value: -1 }, uOpacity: { value: 1 }, uArc: { value: net.arcs ? 1 : 0 },
-      uFogNear: { value: 1 }, uFogFar: { value: 5 }, uLinePulse: { value: 0 },
+      uFogNear: { value: 1 }, uFogFar: { value: 5 }, uLinePulse: { value: 0 }, uInk: { value: 1 },
       uColLine: { value: opts.colors.line.clone() }, uColPulse: { value: opts.colors.pulse.clone() }, uColHi: { value: opts.colors.highlight.clone() },
     };
     const edgeMat = new THREE.ShaderMaterial({ vertexShader: EDGE_VERT, fragmentShader: EDGE_FRAG, uniforms: this.edgeUniforms, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending });
@@ -257,8 +257,10 @@ export class NetworkMesh {
     this.iInfo.needsUpdate = true;
   }
 
-  upload(time: number, pixelHeight: number, fovDeg: number): void {
+  upload(time: number, pixelHeight: number, fovDeg: number, pixelRatio = 1): void {
     this.edgeUniforms.uTime.value = time;
+    // 1-px lines rendered at reduced resolution cover more screen once upscaled.
+    this.edgeUniforms.uInk.value = Math.max(0.2, Math.min(1, pixelRatio));
     this.nodeUniforms.uScale.value = pixelHeight / (2 * Math.tan((fovDeg * Math.PI) / 360));
     if (this.dirty) {
       this.fireTex.needsUpdate = true;
@@ -351,6 +353,9 @@ export class NetworkSim {
   private bucketKey = new Float64Array(8).fill(-1);
   private waveDir = new THREE.Vector3(1, 0, 0);
   private wavePhase = -1.2;
+  /** Homeostatic inhibition (0..1) that keeps total activity bounded. */
+  inhibition = 1;
+  private meanDeg = 1;
   /** Recent firings for signal tracking: [node, time]. */
   readonly recent: { node: number; time: number }[] = [];
 
@@ -369,6 +374,7 @@ export class NetworkSim {
       this.adj[fill[b2]] = a; this.adjLen[fill[b2]++] = net.lengths[e];
     }
     this.heap = new ArrivalHeap(Math.min(400_000, E * 8 + 1000));
+    this.meanDeg = Math.max(1, (2 * E) / Math.max(1, n));
     this.rng = new Rng(seed ^ 0x5bd1e995);
     this.lastFire = new Float32Array(n).fill(-1e4);
   }
@@ -390,8 +396,11 @@ export class NetworkSim {
     this.buckets[slot]++;
     this.recent.push({ node: i, time: t });
     if (this.recent.length > 64) this.recent.shift();
+    // `propagation` sets the branching ratio σ = 2·propagation (0.5 → critical),
+    // normalised by mean degree so dense and sparse graphs behave alike.
+    const pEdge = Math.min(0.95, ((2 * p.propagation) / Math.max(1, this.meanDeg - 1)) * this.inhibition);
     for (let q = this.offs[i]; q < this.offs[i + 1]; q++) {
-      if (this.rng.next() < p.propagation) this.heap.push(t + this.adjLen[q] / Math.max(0.01, p.speed), this.adj[q]);
+      if (this.rng.next() < pEdge) this.heap.push(t + this.adjLen[q] / Math.max(0.01, p.speed), this.adj[q]);
     }
   }
 
@@ -442,6 +451,10 @@ export class NetworkSim {
     let sum = 0;
     for (let i = 0; i < 8; i++) if (this.bucketKey[i] > now - 4 && this.bucketKey[i] <= now) sum += this.buckets[i];
     this.firesPerSec = sum;
+    // Homeostasis: keep the network-wide firing rate below ~7 % of nodes per second.
+    const ceiling = n * 0.07 + 20;
+    if (sum > ceiling) this.inhibition = Math.max(0.05, this.inhibition * 0.92);
+    else this.inhibition = Math.min(1, this.inhibition * 1.01 + 0.0005);
   }
 
   get pending(): number {

@@ -28,7 +28,7 @@ export const fieldLines: EngineDef = {
     { key: 'motion', label: 'Charge motion', type: 'number', default: 0.5, min: 0, max: 3, step: 0.01, group: 'System' },
     { key: 'flow', label: 'Particle flow', type: 'number', default: 1, min: 0, max: 4, step: 0.01, group: 'System' },
     { key: 'brightness', label: 'Brightness', type: 'number', default: 1, min: 0, max: 4, step: 0.01, group: 'Look' },
-    { key: 'bloom', label: 'Bloom', type: 'number', default: 0.9, min: 0, max: 3, step: 0.01, group: 'Rendering' },
+    { key: 'bloom', label: 'Bloom', type: 'number', default: 0.45, min: 0, max: 3, step: 0.01, group: 'Rendering' },
   ],
   create(ctx) {
     return new FieldEngine(ctx.quality, ctx.seed, ctx.params, ctx.colors);
@@ -204,7 +204,7 @@ class FieldEngine implements EngineInstance {
       pa[i * 3 + 2] = l.pts[a + 2] + (l.pts[b2 + 2] - l.pts[a + 2]) * u;
     }
     this.partAttr.needsUpdate = true;
-    this.lineMat.opacity = 0.32 * num(p, 'brightness', 1) * num(p, 'layerOpacity', 1);
+    this.lineMat.opacity = 0.2 * num(p, 'brightness', 1) * num(p, 'layerOpacity', 1);
     this.scene.rotation.y += dt * 0.03;
   }
 

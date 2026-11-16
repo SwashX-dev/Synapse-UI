@@ -269,6 +269,9 @@ interface Layer { def: EngineDef; inst: EngineInstance; pass: RenderPass; opacit
 export class VizView {
   readonly canvas: HTMLCanvasElement;
   private g: CanvasRenderingContext2D;
+  /** HUD text is drawn on a separate canvas at full device resolution so it stays crisp when render scale drops. */
+  readonly hudCanvas: HTMLCanvasElement;
+  private hg: CanvasRenderingContext2D;
   readonly rig: CameraRig;
   def: EngineDef | null = null;
   inst: EngineInstance | null = null;
@@ -327,7 +330,10 @@ export class VizView {
     this.canvas = document.createElement('canvas');
     this.canvas.className = 'viz-canvas';
     this.canvas.tabIndex = 0;
-    container.append(this.canvas);
+    this.hudCanvas = document.createElement('canvas');
+    this.hudCanvas.className = 'viz-hud';
+    container.append(this.canvas, this.hudCanvas);
+    this.hg = this.hudCanvas.getContext('2d')!;
     this.g = this.canvas.getContext('2d', { alpha: false, desynchronized: false })!;
     this.rig = new CameraRig(this.canvas);
     this.rig.setMode(opts.camera ?? (opts.preset.camera as CameraMode) ?? 'orbital', true);
@@ -604,6 +610,7 @@ export class VizView {
       topic: (name) => app.monitor.get(name as never),
       width: this.size.w,
       height: this.size.h,
+      pixelRatio: this.size.h / Math.max(1, this.container.clientHeight),
     };
   }
 
@@ -692,10 +699,22 @@ export class VizView {
     renderer.setScissorTest(false);
     this.composer!.render(dt);
     this.g.drawImage(this.engine.canvas, 0, this.engine.bufferHeight - h, w, h, 0, 0, this.canvas.width, this.canvas.height);
+    this.drawHud(cam);
+  }
+
+  /** Draw the HUD overlay (also composited into captures by captureCanvas()). */
+  private drawHud(cam: THREE.Camera): void {
+    const app = this.engine.app;
+    const hc = this.hudCanvas;
+    const dpr = window.devicePixelRatio || 1;
+    const cwCss = this.container.clientWidth, chCss = this.container.clientHeight;
+    const tw = Math.max(1, Math.round(cwCss * dpr)), th = Math.max(1, Math.round(chCss * dpr));
+    if (hc.width !== tw || hc.height !== th) { hc.width = tw; hc.height = th; }
+    this.hg.clearRect(0, 0, hc.width, hc.height);
     if (this.hud && app.get<boolean>('visualization.hud') && this.inst!.hud) {
-      const g = this.g;
+      const g = this.hg;
       g.save();
-      const scale = this.canvas.width / Math.max(1, this.container.clientWidth);
+      const scale = hc.width / Math.max(1, cwCss);
       g.scale(scale, scale);
       const cw = this.container.clientWidth, ch = this.container.clientHeight;
       const v = new THREE.Vector3();
@@ -713,10 +732,21 @@ export class VizView {
       try { this.inst!.hud(g, cw, ch, info); } catch (e) { console.error(e); }
       g.restore();
     } else if (app.get<boolean>('performance.show_fps')) {
-      this.g.fillStyle = this.colors.css.dim;
-      this.g.font = `${10 * (window.devicePixelRatio || 1)}px ${this.colors.css.mono}`;
-      this.g.fillText(`${this.fps.toFixed(0)} FPS`, 8, this.canvas.height - 8);
+      this.hg.fillStyle = this.colors.css.dim;
+      this.hg.font = `${10 * dpr}px ${this.colors.css.mono}`;
+      this.hg.fillText(`${this.fps.toFixed(0)} FPS`, 8 * dpr, hc.height - 8 * dpr);
     }
+  }
+
+  /** Visualization + HUD flattened into one canvas (for screenshots / recordings). */
+  captureCanvas(): HTMLCanvasElement {
+    const c = document.createElement('canvas');
+    c.width = this.canvas.width;
+    c.height = this.canvas.height;
+    const g = c.getContext('2d')!;
+    g.drawImage(this.canvas, 0, 0);
+    if (this.hudCanvas.width > 1) g.drawImage(this.hudCanvas, 0, 0, c.width, c.height);
+    return c;
   }
 
   // ───────────────────────── capture ─────────────────────────
@@ -724,7 +754,7 @@ export class VizView {
   async screenshotPng(): Promise<Uint8Array> {
     this.markDirty();
     this.render(performance.now());
-    const blob = await new Promise<Blob | null>((r) => this.canvas.toBlob(r, 'image/png'));
+    const blob = await new Promise<Blob | null>((r) => this.captureCanvas().toBlob(r, 'image/png'));
     if (!blob) throw new Error('could not encode PNG');
     return new Uint8Array(await blob.arrayBuffer());
   }
@@ -749,11 +779,11 @@ export class VizView {
         this.time += dt;
         this.stepAndDraw(dt);
         if (opts.format === 'png') {
-          const blob = await new Promise<Blob | null>((r) => this.canvas.toBlob(r, 'image/png'));
+          const blob = await new Promise<Blob | null>((r) => this.captureCanvas().toBlob(r, 'image/png'));
           if (!blob) throw new Error('PNG encoding failed');
           await onFrame(i, new Uint8Array(await blob.arrayBuffer()), w, hgt);
         } else {
-          const img = this.g.getImageData(0, 0, w, hgt);
+          const img = this.captureCanvas().getContext('2d')!.getImageData(0, 0, w, hgt);
           await onFrame(i, new Uint8Array(img.data.buffer), w, hgt);
         }
         done++;
@@ -776,6 +806,7 @@ export class VizView {
     if (this.rebuildTimer) clearTimeout(this.rebuildTimer);
     this.engine.unregister(this);
     this.ro.disconnect();
+    this.hudCanvas.remove();
     for (const r of this.releases) r();
     this.releases = [];
     this.teardown();

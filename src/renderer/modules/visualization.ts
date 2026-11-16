@@ -95,7 +95,8 @@ export class VisualizationModule extends SynModule {
     const v = this.view;
     if (!v) return;
     const def = ENGINES[v.preset.engine];
-    this.ctx.setStatus(`${v.preset.name.toUpperCase()}${v.overLimit ? ' · SUSPENDED (LIMIT)' : ''}`);
+    this.ctx.setTitle(v.preset.name.toUpperCase());
+    this.ctx.setStatus(`${(def?.name ?? v.preset.engine).toUpperCase()}${v.overLimit ? ' · SUSPENDED (LIMIT)' : ''}`);
     const sources = [...v.bindings.map((b) => b.source), ...Object.values(v.expressions).flatMap((e) => { const c = tryCompile(e); return 'error' in c ? [] : c.variables; })];
     const live = sources.some((s) => this.ctx.app.data.kind(s) === 'live') || ['topology'].includes(String(v.params.mode)) || v.preset.engine === 'encom-globe';
     const sim = sources.some((s) => this.ctx.app.data.kind(s) === 'sim');

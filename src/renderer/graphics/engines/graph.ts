@@ -200,7 +200,7 @@ class GraphEngine implements EngineInstance {
     const d = camera.position.length();
     this.mesh.edgeUniforms.uFogNear.value = Math.max(0.01, d - this.radius);
     this.mesh.edgeUniforms.uFogFar.value = d + this.radius * 1.2;
-    this.mesh.upload(t, input.height, (camera as THREE.PerspectiveCamera).fov ?? 50);
+    this.mesh.upload(t, input.height, (camera as THREE.PerspectiveCamera).fov ?? 50, input.pixelRatio);
   }
 
   /** Force-directed layout + rewiring. */

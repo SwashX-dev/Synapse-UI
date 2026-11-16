@@ -209,7 +209,7 @@ class CpuModule extends MonitorModule {
     this.stats.temp.textContent = this.temp(t?.main);
     const s = this.get<{ avg: number | null }>('cpu.speed');
     this.stats.speed.textContent = s?.avg ? `${s.avg.toFixed(2)}GHz` : 'n/a';
-    this.stats.load.textContent = d.loadavg[0] !== undefined ? d.loadavg.map((x) => x.toFixed(2)).join(' ') : `${d.load.toFixed(0)}%`;
+    this.stats.load.textContent = d.loadavg[0] !== undefined ? d.loadavg[0].toFixed(2) : `${d.load.toFixed(0)}%`;
   }
 }
 registerModuleType({ manifest: manifest('cpu', 'CPU Monitor', 'Utilisation per core with history, model, clock speed, temperature and load average.', { colSpan: 1, rowSpan: 2, w: 0.18, h: 0.2 }, ['monitor.cpu']), create: (c) => new CpuModule(c) });

@@ -30,6 +30,8 @@ export interface FrameInput {
   topic: <T = unknown>(name: string) => T | undefined;
   width: number;
   height: number;
+  /** Render pixels per CSS pixel (DPR × render scale). Line engines scale opacity by it so density looks constant. */
+  pixelRatio: number;
 }
 
 export interface EngineContext {

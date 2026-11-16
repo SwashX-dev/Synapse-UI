@@ -93,7 +93,7 @@ export const attractor: EngineDef = {
     { key: 'p3', label: 'Parameter 3 (β / c / d)', type: 'number', default: 0, min: -50, max: 50, step: 0.001, group: 'Coefficients' },
     { key: 'brightness', label: 'Brightness', type: 'number', default: 1, min: 0, max: 4, step: 0.01, group: 'Look' },
     { key: 'rotation', label: 'Rotation', type: 'number', default: 0.3, min: 0, max: 3, step: 0.01, group: 'Look' },
-    { key: 'bloom', label: 'Bloom', type: 'number', default: 0.8, min: 0, max: 3, step: 0.01, group: 'Rendering' },
+    { key: 'bloom', label: 'Bloom', type: 'number', default: 0.5, min: 0, max: 3, step: 0.01, group: 'Rendering' },
   ],
   create(ctx) {
     return new AttractorEngine(ctx.quality, ctx.seed, ctx.params, ctx.colors);
@@ -233,7 +233,7 @@ class AttractorEngine implements EngineInstance {
     }
     this.lineU.uHead.value = this.head;
     this.lineU.uOpacity.value = num(p, 'layerOpacity', 1);
-    this.lineU.uAlpha.value = 0.13 * num(p, 'brightness', 1) * Math.sqrt(128 / this.n);
+    this.lineU.uAlpha.value = 0.055 * num(p, 'brightness', 1) * Math.sqrt(128 / this.n);
     this.group.rotation.z += dt * 0.08 * num(p, 'rotation', 0.3);
   }
 

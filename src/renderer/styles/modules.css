@@ -118,3 +118,14 @@ textarea.notes { width: 100%; height: 100%; resize: none; background: transparen
 .kb-key:hover { background: color-mix(in srgb, var(--fg) 10%, transparent); }
 .kb-key:active, .kb-key.pressed, .kb-key.active { background: var(--fg); color: var(--bg); box-shadow: var(--glow-shadow); }
 .row_1 .kb-key:first-child, .row_2 .kb-key:first-child, .row_3 .kb-key:first-child { flex: 1.6 1 0; }
+.viz-hud { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+.clock-body { container-type: size; }
+.clock-time { font-size: clamp(12px, min(52cqh, 15cqw), 56px) !important; }
+.clock-body.compact .clock-time { font-size: clamp(11px, min(46cqh, 14cqw), 40px) !important; }
+.clock-date { font-size: clamp(8px, 16cqh, 12px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.cpu-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.cpu-stats .v { overflow: hidden; text-overflow: ellipsis; font-size: .92em; }
+.proc-row { grid-template-columns: 46px minmax(0, 1fr) 48px 44px; gap: 4px; font-size: .88em; }
+.conn-row > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.conn-row { grid-template-columns: minmax(0, 1fr) auto minmax(0, 30%); }
+.conn-row > span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

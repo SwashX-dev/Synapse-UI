@@ -137,7 +137,10 @@ class NBody implements EngineInstance {
       uniforms: this.bodyU, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
     }));
     pts.frustumCulled = false;
-    this.scene.add(trails, pts);
+    const sys = new THREE.Group();
+    sys.add(trails, pts);
+    sys.rotation.x = 0.55;
+    this.scene.add(sys);
     this.disp.push(tg, trails.material as THREE.Material, hg, pts.material as THREE.Material);
   }
 
