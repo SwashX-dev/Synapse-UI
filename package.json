@@ -1,114 +1,82 @@
 {
-  "name": "edex-ui",
-  "productName": "eDEX-UI",
-  "version": "2.2.8",
-  "description": "A science fiction desktop running everywhere. Awesome.",
+  "name": "synapse-ui",
+  "productName": "SYNAPSE-UI",
+  "version": "3.0.0-alpha.1",
+  "description": "SYNAPSE-UI — A modular, GPU-accelerated neural visualization and futuristic terminal environment built upon eDEX-UI.",
   "keywords": [
-    "desktop",
-    "sci-fi",
-    "gui",
-    "portable",
-    "tty",
-    "terminal"
+    "edex-ui",
+    "terminal",
+    "electron",
+    "neural-network",
+    "visualization",
+    "threejs",
+    "webgl",
+    "system-monitor"
   ],
-  "main": "src/_boot.js",
+  "main": "dist/main/main.js",
   "scripts": {
-    "start": "electron src --nointro",
-    "install-linux": "npm install && cd src && npm install && ./../node_modules/.bin/electron-rebuild -f -w node-pty && cd ..",
-    "preinstall-windows": "npm install --global --production windows-build-tools && npm install --global node-gyp && setx PYTHON \"%USERPROFILE%\\.windows-build-tools\\python27\\python.exe\"",
-    "install-windows": "npm install && cd src && npm install && ..\\node_modules\\.bin\\electron-rebuild -f -w node-pty && cd ..",
-    "prebuild-linux": "rsync -a --info=progress2 src/ prebuild-src --exclude node_modules && node prebuild-minify.js && cd prebuild-src && npm install",
-    "prebuild-darwin": "rsync -a src/ prebuild-src --exclude node_modules && node prebuild-minify.js && cd prebuild-src && npm install",
-    "prebuild-windows": "mkdir prebuild-src && xcopy src\\* prebuild-src\\ /E /C /Q /Y && node prebuild-minify.js && cd prebuild-src && npm install",
-    "build-linux": "./node_modules/.bin/electron-builder build -l --x64 --ia32 --arm64 --armv7l",
-    "build-darwin": "./node_modules/.bin/electron-builder build -m",
-    "build-windows": "node_modules\\.bin\\electron-builder build -w",
-    "postbuild-linux": "rm -R prebuild-src",
-    "postbuild-darwin": "rm -R prebuild-src",
-    "postbuild-windows": "rmdir /S /Q prebuild-src",
-    "test": "rsync -a --info=progress2 src/ prebuild-src --exclude node_modules && node prebuild-minify.js && cd prebuild-src && npm install && snyk test && cd .. && rm -R prebuild-src",
-    "init-file-icons": "git submodule update --init",
-    "update-file-icons": "git submodule foreach git pull origin master && node file-icons-generator.js"
+    "build": "node scripts/build.mjs",
+    "build:prod": "node scripts/build.mjs --production",
+    "watch": "node scripts/build.mjs --watch",
+    "start": "node scripts/build.mjs && electron .",
+    "start:dev": "node scripts/build.mjs && electron . --dev",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "node scripts/build.mjs && playwright test",
+    "bench": "node scripts/build.mjs && node scripts/bench.mjs",
+    "screenshots": "node scripts/build.mjs && node scripts/screenshots.mjs",
+    "audit:deps": "npm audit --omit=dev --audit-level=high",
+    "rebuild:native": "electron-builder install-app-deps",
+    "dist": "node scripts/build.mjs --production && electron-builder --publish never",
+    "dist:linux": "node scripts/build.mjs --production && electron-builder --linux --publish never",
+    "dist:win": "node scripts/build.mjs --production && electron-builder --win --publish never",
+    "dist:mac": "node scripts/build.mjs --production && electron-builder --mac --publish never"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GitSquared/edex-ui.git"
+    "url": "git+https://github.com/SwashX-dev/Synapse-UI.git"
   },
-  "author": "Gabriel 'Squared' SAILLARD <gabriel@saillard.dev> (https://gaby.dev)",
+  "author": "SYNAPSE-UI contributors (fork of eDEX-UI by Gabriel 'Squared' SAILLARD)",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/GitSquared/edex-ui/issues"
+    "url": "https://github.com/SwashX-dev/Synapse-UI/issues"
   },
-  "homepage": "https://github.com/GitSquared/edex-ui#readme",
-  "build": {
-    "appId": "com.edex.ui",
-    "productName": "eDEX-UI",
-    "publish": "github",
-    "asar": true,
-    "compression": "normal",
-    "copyright": "Copyright © 2017-2021 Gabriel 'Squared' SAILLARD <gabriel@saillard.dev> (https://gaby.dev)",
-    "directories": {
-      "output": "dist",
-      "app": "prebuild-src"
-    },
-    "forceCodeSigning": false,
-    "npmRebuild": true,
-    "artifactName": "eDEX-UI-${os}-${arch}.${ext}",
-    "linux": {
-      "target": [
-        "AppImage"
-      ],
-      "category": "System",
-      "icon": "media/linuxIcons"
-    },
-    "appImage": {
-      "artifactName": "eDEX-UI-Linux-${arch}.AppImage"
-    },
-    "mac": {
-      "target": [
-        {
-          "target": "dmg",
-          "arch": [
-            "x64"
-          ]
-        }
-      ],
-      "category": "public.app-category.utilities",
-      "icon": "media/icon.icns"
-    },
-    "dmg": {
-      "artifactName": "eDEX-UI-macOS-${arch}.dmg"
-    },
-    "win": {
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
-        }
-      ],
-      "icon": "media/icon.ico"
-    },
-    "nsis": {
-      "artifactName": "eDEX-UI-Windows-${arch}.exe",
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "deleteAppDataOnUninstall": true
-    }
+  "homepage": "https://github.com/SwashX-dev/Synapse-UI#readme",
+  "engines": {
+    "node": ">=22"
   },
   "dependencies": {
-    "clean-css": "5.2.1",
-    "electron": "^12.1.0",
-    "electron-builder": "^22.14.5",
-    "electron-rebuild": "^2.3.5",
-    "mime-types": "^2.1.33",
-    "node-abi": "2.30.1",
-    "node-json-minify": "1.0.0",
-    "terser": "^5.9.0"
+    "node-pty": "1.1.0",
+    "systeminformation": "5.33.19"
   },
-  "optionalDependencies": {
-    "cson-parser": "4.0.9"
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.1",
+    "@types/node": "24.19.2",
+    "@types/three": "0.186.0",
+    "@xterm/addon-fit": "0.11.0",
+    "@xterm/addon-search": "0.16.0",
+    "@xterm/addon-unicode11": "0.9.0",
+    "@xterm/addon-web-links": "0.12.0",
+    "@xterm/addon-webgl": "0.19.0",
+    "@xterm/xterm": "6.0.0",
+    "electron": "45.2.3",
+    "electron-builder": "26.18.0",
+    "esbuild": "0.28.2",
+    "eslint": "10.13.0",
+    "gifenc": "1.0.3",
+    "smol-toml": "1.9.1",
+    "three": "0.186.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.2",
+    "vitest": "4.1.12",
+    "zod": "4.6.7"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "node-pty@1.1.0": true,
+    "electron-winstaller": false
   }
 }
