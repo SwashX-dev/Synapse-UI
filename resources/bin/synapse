@@ -1,0 +1,32 @@
+#!/bin/sh
+# synapse — control the SYNAPSE-UI instance hosting this terminal.
+#
+# Works only inside a SYNAPSE-UI terminal. The request is written to the
+# terminal as a private OSC escape sequence carrying this session's secret
+# token; SYNAPSE-UI validates the token, runs the *application* command
+# (never a shell command) and types the base64 reply back on stdin.
+# No network socket is involved.
+if [ -z "$SYNAPSE_TERM_TOKEN" ]; then
+  echo "synapse: not running inside a SYNAPSE-UI terminal (or app commands are disabled)" >&2
+  exit 2
+fi
+if [ ! -t 0 ] || [ ! -t 1 ]; then
+  echo "synapse: must be run interactively in a SYNAPSE-UI terminal" >&2
+  exit 2
+fi
+payload=$(printf '%s\037' "$@" | base64 | tr -d '\n')
+saved=$(stty -g 2>/dev/null)
+stty -echo -icanon min 0 time 30 2>/dev/null
+printf '\033]7701;%s;%s\007' "$SYNAPSE_TERM_TOKEN" "$payload"
+reply=""
+IFS= read -r reply
+[ -n "$saved" ] && stty "$saved" 2>/dev/null
+if [ -z "$reply" ]; then
+  echo "synapse: no response from SYNAPSE-UI" >&2
+  exit 3
+fi
+status=${reply%%:*}
+body=${reply#*:}
+printf '%s' "$body" | base64 -d 2>/dev/null
+echo
+[ "$status" = "ok" ] && exit 0 || exit 1
