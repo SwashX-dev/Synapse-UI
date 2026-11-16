@@ -23,7 +23,7 @@ export async function launch(config = '', opts: { keepConfig?: string } = {}): P
   let app: ElectronApplication | null = null;
   for (let attempt = 0; attempt < 2 && !app; attempt++) {
     try {
-      app = await electron.launch({ executablePath, args: [root], env, timeout: 60_000 });
+      app = await electron.launch({ chromiumSandbox: true, executablePath, args: [root], env, timeout: 60_000 });
       await app.firstWindow({ timeout: 45_000 });
     } catch (e) {
       await app?.close().catch(() => {});

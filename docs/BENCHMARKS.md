@@ -2,7 +2,7 @@
 
 Measured 2026-11-16 on NixOS x86_64, Ryzen 5 7235HS (8 logical CPUs), 31 GiB RAM, RTX 4050 Laptop GPU, Electron 45.2.3 / Chromium 156. ANGLE reports NVIDIA OpenGL ES 3.2. Desktop Wayland session, 1600×900 viewport; 4-second warmup and 15-second sampling per workspace. Ready-to-workspace startup: 3.09 seconds.
 
-**These are exploratory, contended measurements, not isolated benchmarks.** eDEX-UI and the IDE were already running; local e2e tests overlapped the early workloads. Adaptive resolution/quality remained active and state carries between workspaces. Thermal/power and display scheduling affect results. These results do not demonstrate a stable 60 FPS target.
+**These are exploratory, contended measurements, not isolated benchmarks.** eDEX-UI and the IDE were already running; local e2e tests overlapped the early workloads. Adaptive resolution/quality remained active and state carries between workspaces. Thermal/power and display scheduling affect results. These results do not demonstrate a stable 60 FPS target. These initial captures used Playwright’s default sandbox-disabled launch; the harness now explicitly enables Chromium sandboxing, so repeat measurements for release-equivalent comparisons.
 
 | Workspace | Profile | Scheduler ticks/s | Frame interval p95 ms | CPU work p95 ms | Mean app CPU % | Mean app RSS MiB |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |

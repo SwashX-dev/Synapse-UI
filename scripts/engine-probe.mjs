@@ -9,7 +9,7 @@ const cfg = fs.mkdtempSync(path.join(os.tmpdir(), 'synapse-cfg-'));
 fs.writeFileSync(path.join(cfg, 'config.toml'), 'config_version = 1\n[application]\nfullscreen = false\nboot_animation = false\nfirst_run_complete = true\nworkspace = "cinematic"\n[performance]\nbattery_saver = false\nmode = "balanced"\n');
 const env = { ...process.env, SYNAPSE_CONFIG_DIR: cfg };
 delete env.WAYLAND_DISPLAY; env.XDG_SESSION_TYPE = 'x11';
-const app = await electron.launch({ executablePath: process.env.SYNAPSE_ELECTRON, args: ['.'], env, timeout: 60000 });
+const app = await electron.launch({ chromiumSandbox: true, executablePath: process.env.SYNAPSE_ELECTRON, args: ['.'], env, timeout: 60000 });
 const page = await app.firstWindow();
 const errors = [];
 page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });

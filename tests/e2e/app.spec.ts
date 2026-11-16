@@ -24,6 +24,8 @@ test.describe('application', () => {
       const w = window as unknown as W;
       return { require: typeof w.require, process: typeof w.process, bridgeKeys: Object.keys(w.synapse).sort(), hasIpc: 'ipcRenderer' in w.synapse || 'invoke' in w.synapse };
     });
+    const disabledByFlag = await L.app.evaluate(() => process.argv.includes('--no-sandbox'));
+    expect(disabledByFlag).toBe(false);
     expect(r.require).toBe('undefined');
     expect(r.process).toBe('undefined');
     expect(r.hasIpc).toBe(false);

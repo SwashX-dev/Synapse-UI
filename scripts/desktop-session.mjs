@@ -10,7 +10,7 @@ export async function session(workspace = 'neural-lab', mode = 'balanced') {
   if (env.SYNAPSE_REAL_DISPLAY !== '1') { delete env.WAYLAND_DISPLAY; env.XDG_SESSION_TYPE = 'x11'; }
   let app;
   try {
-    app = await electron.launch({ executablePath: env.SYNAPSE_ELECTRON, args: ['.'], env, timeout: 60000 });
+    app = await electron.launch({ chromiumSandbox: true, executablePath: env.SYNAPSE_ELECTRON, args: ['.'], env, timeout: 60000 });
     const page = await app.firstWindow();
     await page.setViewportSize({ width: 1600, height: 900 });
     await page.waitForFunction(() => window.__SYNAPSE__?.workspace?.current, null, { timeout: 60000 });
