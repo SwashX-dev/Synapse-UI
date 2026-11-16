@@ -67,6 +67,9 @@ describe.runIf(posix)('PtyManager (real shells via node-pty)', () => {
     if (process.platform !== 'linux') return;
     const s = sink(3);
     const c = mgr.create(s, { cols: 80, rows: 24 }, { ...opts, cwd: '/tmp' });
+    // forkpty returns before the child necessarily performs chdir/exec.
+    mgr.write(s, c.id, 'pwd\r');
+    await waitFor(() => s.output(c.id).includes('/tmp'));
     const info = await mgr.info(s, c.id);
     expect(info.cwd).toBe('/tmp');
   });
