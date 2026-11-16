@@ -117,7 +117,7 @@ export class MonitorStore {
     this.latest.set(topic, d);
     for (const [name, m] of Object.entries(METRICS)) {
       if (m.topic !== topic) continue;
-      let v: number | null = null;
+      let v: number | null;
       try { v = m.read(d); } catch { v = null; }
       if (v !== null && Number.isFinite(v)) this.history(name).push(v);
     }

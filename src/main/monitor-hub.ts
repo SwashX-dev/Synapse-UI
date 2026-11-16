@@ -321,7 +321,7 @@ function isLoopback(addr: string): boolean {
 
 function amdSysfsCards(): Record<string, number | null>[] {
   const out: Record<string, number | null>[] = [];
-  let cards: string[] = [];
+  let cards: string[];
   try { cards = fs.readdirSync('/sys/class/drm').filter((n) => /^card\d+$/.test(n)); } catch { return out; }
   for (const card of cards) {
     const dev = path.join('/sys/class/drm', card, 'device');

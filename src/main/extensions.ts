@@ -57,7 +57,7 @@ export class ExtensionRegistry {
   list(): ExtensionInfo[] {
     this.load();
     const out: ExtensionInfo[] = [];
-    let names: string[] = [];
+    let names: string[];
     try { names = fs.readdirSync(this.dir).filter((n) => !n.startsWith('.')); } catch { return out; }
     for (const name of names) {
       const dir = path.join(this.dir, name);

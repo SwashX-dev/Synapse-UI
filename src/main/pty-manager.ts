@@ -168,7 +168,7 @@ export class PtyManager {
         if (tpgid > 0) fg = tpgid;
       } catch { /* exited */ }
       const read = (p: string) => { try { return fs.readlinkSync(p); } catch { return null; } };
-      let name: string | null = null;
+      let name: string | null;
       try { name = fs.readFileSync(`/proc/${fg}/comm`, 'utf8').trim(); } catch { name = s.pty.process; }
       return { cwd: read(`/proc/${fg}/cwd`) ?? read(`/proc/${pid}/cwd`), process: name, pid };
     }

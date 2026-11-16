@@ -1,0 +1,66 @@
+# Packaging for SYNAPSE-UI (electron-builder). See docs/BUILDING.md.
+appId: dev.synapseui.app
+productName: SYNAPSE-UI
+copyright: "© 2017–2021 Gabriel Saillard & eDEX-UI contributors · © 2026 SYNAPSE-UI contributors · GPL-3.0"
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**
+  - "!dist/**/*.map"
+  - package.json
+  - LICENSE
+asar: true
+asarUnpack:
+  - "**/node_modules/node-pty/**"
+extraResources:
+  - from: resources/bin
+    to: bin
+npmRebuild: true
+artifactName: "${productName}-${version}-${os}-${arch}.${ext}"
+electronFuses:
+  runAsNode: false
+  enableCookieEncryption: true
+  enableNodeOptionsEnvironmentVariable: false
+  enableNodeCliInspectArguments: false
+  enableEmbeddedAsarIntegrityValidation: true
+  onlyLoadAppFromAsar: true
+  grantFileProtocolExtraPrivileges: false
+linux:
+  syncDesktopName: true
+  target: [AppImage, deb, rpm, tar.gz]
+  category: System
+  icon: build/icon.png
+  executableName: synapse-ui
+  synopsis: Modular neural-visualization and terminal workstation (eDEX-UI fork)
+  description: SYNAPSE-UI — a modular, GPU-accelerated neural visualization and futuristic terminal environment built upon eDEX-UI.
+  maintainer: SYNAPSE-UI contributors
+  desktop:
+    entry:
+      StartupWMClass: SYNAPSE-UI
+      Keywords: terminal;monitor;visualization;neural;edex;
+deb:
+  packageName: synapse-ui
+rpm:
+  packageName: synapse-ui
+win:
+  target: [nsis, portable]
+  icon: build/icon.ico
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: false
+  artifactName: "${productName}-Setup-${version}-${arch}.${ext}"
+portable:
+  artifactName: "${productName}-Portable-${version}-${arch}.${ext}"
+mac:
+  target: [dmg, zip]
+  category: public.app-category.developer-tools
+  icon: build/icon.icns
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    NSMicrophoneUsageDescription: SYNAPSE-UI uses the microphone only when you explicitly start an audio input for audio-reactive visualizations.
+publish: null
